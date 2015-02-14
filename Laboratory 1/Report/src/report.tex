@@ -2,7 +2,8 @@
 
 \section{Представить списки в виде списочных ячеек}
 
-\paragraph{Задание 1.1} \texttt{'(open close halph)}
+
+\paragraph{Задание 1.1} $'(open\; close\; halph)$
 
 \begin{center}\begin{tikzpicture}
 	\node [conscell] (cell1) {};
@@ -17,3 +18,93 @@
 	\draw [pointer] (c1 cell3) -- +(0, -1) node [anchor=north] {halph};
 	\foreach \i in {cell1,cell2,cell3}{\draw[fill=red] (c1 \i)circle(2pt) (c2 \i)circle(2pt);}
 \end{tikzpicture}\end{center}
+
+
+\paragraph{Задание 1.2} $'\bigl((open1)\;(close2)\;(halph3)\bigr)$
+
+\begin{center}\begin{tikzpicture}
+	\node [conscell] (cell1) {};
+	\node [conscell, right=2cm of cell1] (cell2) {};
+	\node [conscell, right=2cm of cell2] (cell3) {};
+	\node [conscell, below= of cell1] (cell4) {};
+	\node [conscell, below= of cell2] (cell5) {};
+	\node [conscell, below= of cell3] (cell6) {};
+	
+	\draw [pointer] (c2 cell1) -- (cell2);
+	\draw [pointer] (c2 cell2) -- (cell3);
+	\draw [pointer] (c2 cell3) -- +(1, 0) node [anchor=west] {Nil};
+	
+	\draw [pointer] (c1 cell1) -- (cell4.135);
+	\draw [pointer] (c1 cell2) -- (cell5.135);
+	\draw [pointer] (c1 cell3) -- (cell6.135);
+	
+	\draw [pointer] (c1 cell4) -- +(0, -1) node [anchor=north] {open1};
+	\draw [pointer] (c2 cell4) -- +(1,  0) node [anchor=west]  {Nil};
+	
+	\draw [pointer] (c1 cell5) -- +(0, -1) node [anchor=north] {close2};
+	\draw [pointer] (c2 cell5) -- +(1,  0) node [anchor=west]  {Nil};
+	
+	\draw [pointer] (c1 cell6) -- +(0, -1) node [anchor=north] {halph3};
+	\draw [pointer] (c2 cell6) -- +(1,  0) node [anchor=west]  {Nil};
+	
+	
+	\foreach \i in {cell1,cell2,cell3,cell4,cell5,cell6}{\draw[fill=red] (c1 \i)circle(2pt) (c2 \i)circle(2pt);}
+\end{tikzpicture}\end{center}
+
+
+\paragraph{Задание 1.3} $'\biggl((one)\; f\!or\; all\; \Bigl(and\; \bigl(me\; (f\!or\; you)\bigr)\Bigr)\biggr)$
+
+\begin{center}\begin{tikzpicture}
+	\node [conscell] (cell1) {};
+	\node [conscell, right=2cm of cell1] (cell2) {};
+	\node [conscell, right=    of cell2] (cell3) {};
+	\node [conscell, right=    of cell3] (cell4) {};
+	\node [conscell, below=    of cell1] (cell5) {};
+	\node [conscell, below=2cm of cell2] (cell6) {};
+	\node [conscell, right=    of cell6] (cell7) {};
+	\node [conscell, below=    of cell7] (cell8) {};
+	\node [conscell, right=    of cell8] (cell9) {};
+	\node [conscell, below=    of cell9] (cell10) {};
+	\node [conscell, right=    of cell10] (cell11) {};
+	
+	
+	\draw [pointer] (c2 cell1) -- (cell2);
+	\draw [pointer] (c2 cell2) -- (cell3);
+	\draw [pointer] (c2 cell3) -- (cell4);
+	\draw [pointer] (c2 cell4) -- +(1, 0) node [anchor=west] {Nil};
+	
+	\draw [pointer] (c1 cell1) -- (cell5.135);
+	\draw [pointer] (c1 cell2) -- +(0, -1) node [anchor=north] {for};
+	\draw [pointer] (c1 cell3) -- +(0, -1) node [anchor=north] {all};
+	\draw [-] (c1 cell4) -- +(0, -2) node (t1) {};
+	\draw [pointer] (t1.text) -| (cell6.135);
+	
+	
+	\draw [pointer] (c1 cell5) -- +(0, -1) node [anchor=north] {one};
+	\draw [pointer] (c2 cell5) -- +(1, 0) node [anchor=west] {Nil};
+	
+	
+	\draw [pointer] (c2 cell6) -- (cell7);
+	\draw [pointer] (c2 cell7) -- +(1, 0) node [anchor=west] {Nil};
+	
+	\draw [pointer] (c1 cell6) -- +(0, -1) node [anchor=north] {and};
+	\draw [pointer] (c1 cell7) -- (cell8.135);
+	
+	
+	\draw [pointer] (c2 cell8) -- (cell9);
+	\draw [pointer] (c2 cell9) -- +(1, 0) node [anchor=west] {Nil};
+	
+	\draw [pointer] (c1 cell8) -- +(0, -1) node [anchor=north] {me};
+	\draw [pointer] (c1 cell9) -- (cell10.135);
+	
+	
+	\draw [pointer] (c2 cell10) -- (cell11);
+	\draw [pointer] (c2 cell11) -- +(1, 0) node [anchor=west] {Nil};
+	
+	\draw [pointer] (c1 cell10) -- +(0, -1) node [anchor=north] {for};
+	\draw [pointer] (c1 cell11) -- +(0, -1) node [anchor=north] {you};
+	
+	
+	\foreach \i in {cell1,cell2,cell3,cell4,cell5,cell6,cell7,cell8,cell9,cell10,cell11}{\draw[fill=red] (c1 \i)circle(2pt) (c2 \i)circle(2pt);}
+\end{tikzpicture}\end{center}
+ 
