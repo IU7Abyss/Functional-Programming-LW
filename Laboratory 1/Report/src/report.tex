@@ -4,6 +4,7 @@
 
 
 \paragraph{Задание 1.1} $'(open\; close\; halph)$
+\vfill
 
 \begin{center}\begin{tikzpicture}
 	\node [conscell] (cell1) {};
@@ -16,6 +17,7 @@
 	\draw [pointer] (c1 cell1) -- +(0, -1) node [anchor=north] {open};
 	\draw [pointer] (c1 cell2) -- +(0, -1) node [anchor=north] {close};
 	\draw [pointer] (c1 cell3) -- +(0, -1) node [anchor=north] {halph};
+	
 	\foreach \i in {cell1,cell2,cell3}{\draw[fill=red] (c1 \i)circle(2pt) (c2 \i)circle(2pt);}
 \end{tikzpicture}\end{center}
 
@@ -27,9 +29,9 @@
 	\node [conscell] (cell1) {};
 	\node [conscell, right=2cm of cell1] (cell2) {};
 	\node [conscell, right=2cm of cell2] (cell3) {};
-	\node [conscell, below= of cell1] (cell4) {};
-	\node [conscell, below= of cell2] (cell5) {};
-	\node [conscell, below= of cell3] (cell6) {};
+	\node [conscell, below=    of cell1] (cell4) {};
+	\node [conscell, below=    of cell2] (cell5) {};
+	\node [conscell, below=    of cell3] (cell6) {};
 	
 	\draw [pointer] (c2 cell1) -- (cell2);
 	\draw [pointer] (c2 cell2) -- (cell3);
@@ -114,12 +116,13 @@
 
 \newpage
 \paragraph{Задание 1.4} $'\bigl((tool)\;(call)\bigr)$
+\vfill
 
 \begin{center}\begin{tikzpicture}
 	\node [conscell] (cell1) {};
 	\node [conscell, right=2cm of cell1] (cell2) {};
-	\node [conscell, below= of cell1] (cell3) {};
-	\node [conscell, below= of cell2] (cell4) {};
+	\node [conscell, below=    of cell1] (cell3) {};
+	\node [conscell, below=    of cell2] (cell4) {};
 	
 	\draw [pointer] (c2 cell1) -- (cell2);
 	\draw [pointer] (c2 cell2) -- +(1, 0) node [anchor=west] {Nil};
@@ -136,19 +139,21 @@
 	
 	\foreach \i in {cell1,cell2,cell3,cell4}{\draw[fill=red] (c1 \i)circle(2pt) (c2 \i)circle(2pt);}
 \end{tikzpicture}\end{center}
+\vfill
  
 
 \paragraph{Задание 1.5} $'\Bigl((tool1)\;\bigl((call2)\bigr)\;\bigl((sell)\bigr)\Bigr)$
+\vfill
 
 \begin{center}\begin{tikzpicture}
 	\node [conscell] (cell1) {};
 	\node [conscell, right=2cm of cell1] (cell2) {};
 	\node [conscell, right=2cm of cell2] (cell3) {};
-	\node [conscell, below= of cell1] (cell4) {};
-	\node [conscell, below= of cell2] (cell5) {};
-	\node [conscell, below= of cell3] (cell6) {};
-	\node [conscell, below= of cell5] (cell7) {};
-	\node [conscell, below= of cell6] (cell8) {};
+	\node [conscell, below=    of cell1] (cell4) {};
+	\node [conscell, below=    of cell2] (cell5) {};
+	\node [conscell, below=    of cell3] (cell6) {};
+	\node [conscell, below=    of cell5] (cell7) {};
+	\node [conscell, below=    of cell6] (cell8) {};
 	
 	\draw [pointer] (c2 cell1) -- (cell2);
 	\draw [pointer] (c2 cell2) -- (cell3);
@@ -175,4 +180,52 @@
 	
 	\foreach \i in {cell1,cell2,cell3,cell4,cell5,cell6,cell7,cell8}{\draw[fill=red] (c1 \i)circle(2pt) (c2 \i)circle(2pt);}
 \end{tikzpicture}\end{center}
+\vfill
+
+
+\paragraph{Задание 1.6}$'\Bigl(\bigl((tool)\;(call)\bigr)\;\bigl((sell)\bigr)\Bigr)$
+\vfill
+
+\begin{center}\begin{tikzpicture}
+	\node [conscell] (cell1) {};
+	\node [conscell, right=6cm of cell1] (cell2) {};
+	\node [conscell, below=    of cell1] (cell3) {};
+	\node [conscell, right=2cm of cell3] (cell4) {};
+	\node [conscell, below=    of cell2] (cell5) {};
+	\node [conscell, below=    of cell3] (cell6) {};
+	\node [conscell, below=    of cell4] (cell7) {};
+	\node [conscell, below=    of cell5] (cell8) {};
+
+	
+	\draw [pointer] (c2 cell1) -- (cell2);
+	\draw [pointer] (c2 cell2) -- +(1, 0) node [anchor=west] {Nil};
+
+	\draw [pointer] (c1 cell1) -- (cell3.135);
+	\draw [pointer] (c1 cell2) -- (cell5.135);
+
+	
+	\draw [pointer] (c2 cell3) -- (cell4);
+	\draw [pointer] (c2 cell4) -- +(1, 0) node [anchor=west] {Nil};
+	\draw [pointer] (c2 cell5) -- +(1, 0) node [anchor=west] {Nil};
+
+	\draw [pointer] (c1 cell3) -- (cell6.135);
+	\draw [pointer] (c1 cell4) -- (cell7.135);
+	\draw [pointer] (c1 cell5) -- (cell8.135);
+
+	
+	\draw [pointer] (c2 cell6) -- +(1,  0) node [anchor=west]  {Nil};
+	\draw [pointer] (c1 cell6) -- +(0, -1) node [anchor=north] {tool};
+	
+	
+	\draw [pointer] (c2 cell7) -- +(1,  0) node [anchor=west]  {Nil};
+	\draw [pointer] (c1 cell7) -- +(0, -1) node [anchor=north] {cool};
+	
+	
+	\draw [pointer] (c2 cell8) -- +(1,  0) node [anchor=west]  {Nil};
+	\draw [pointer] (c1 cell8) -- +(0, -1) node [anchor=north] {sell};
+
+
+	\foreach \i in {cell1,cell2,cell3,cell4,cell5,cell6,cell7,cell8}{\draw[fill=red] (c1 \i)circle(2pt) (c2 \i)circle(2pt);}
+\end{tikzpicture}\end{center}
+\vfill
  
