@@ -237,13 +237,13 @@
 \paragraph{Задание 2.1} Возвращающие второй элемент списка
 
 \begin{lstlisting}
-(cadr example-list)
+(car (cdr example-list)) == (cadr example-list)
 \end{lstlisting}
 
 
 \paragraph{Задание 2.2} Возвращающие третий элемент списка
 \begin{lstlisting}
-(caddr example-list)
+(car (cdr (cdr example-list))) == (caddr example-list)
 \end{lstlisting}
 
 
@@ -366,3 +366,5 @@
 \begin{lstlisting}
 (cons '(one two) '(free temp)) => ((ONE TWO) FREE TEMP)
 \end{lstlisting}
+
+
