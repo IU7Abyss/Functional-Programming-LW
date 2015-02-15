@@ -404,11 +404,13 @@
 \newpage
 \section{Написать функции и представить результаты в виде cons-ячеек}
 
-\problem Функция от четырёх аргументов возвращающие список вида 
+\vfill
+\problem Функция от четырёх аргументов возвращающая список вида 
 \[
 	\bigl((arg1\; arg2)\; (arg3\; arg4)\bigr)
 \]
 
+\vfill
 \biglisting{../../Problems/src/problem-5-1.lisp}
 
 \begin{center}\begin{tikzpicture}
@@ -442,3 +444,37 @@
 	
 	\foreach \i in {cell1,cell2,cell3,cell4,cell5,cell6}{\draw[fill=red] (c1 \i)circle(2pt) (c2 \i)circle(2pt);}
 \end{tikzpicture}\end{center}
+\vfill
+
+
+\problem Функция от двух аргументов возвращающая список вида
+\[
+	\bigl((arg1)\; (arg2)\bigr)
+\]
+
+\vfill
+\biglisting{../../Problems/src/problem-5-2.lisp}
+
+\begin{center}\begin{tikzpicture}
+	\node [conscell] (cell1) {};
+	\node [conscell, right=2.5cm of cell1] (cell2) {};
+	\node [conscell, below=      of cell1] (cell3) {};
+	\node [conscell, below=      of cell2] (cell4) {};
+	
+	\draw [pointer] (c2 cell1) -- (cell2);
+	\draw [pointer] (c2 cell2) -- +(1, 0) node [anchor=west] {Nil};
+	
+	\draw [pointer] (c1 cell1) -- (cell3.135);
+	\draw [pointer] (c1 cell2) -- (cell4.135);
+	
+	\draw [pointer] (c1 cell3) -- +(0, -1) node [anchor=north] {arg1};
+	\draw [pointer] (c2 cell3) -- +(1,  0) node [anchor=west]  {Nil};
+	
+	\draw [pointer] (c1 cell4) -- +(0, -1) node [anchor=north] {arg2};
+	\draw [pointer] (c2 cell4) -- +(1,  0) node [anchor=west]  {Nil};
+	
+	
+	\foreach \i in {cell1,cell2,cell3,cell4}{\draw[fill=red] (c1 \i)circle(2pt) (c2 \i)circle(2pt);}
+\end{tikzpicture}\end{center}
+\vfill
+
