@@ -116,3 +116,39 @@
 	\item применение $equal$ к $2, 3$;
 	\item \underline{результат}: NIL.
 \end{enumerate}
+
+
+
+\section{Написать функцию и составить для неё диаграмму вычисления}
+
+\problem Функция вычисляет гипотенузу прямоугольного треугольника по заданным катетам.
+
+\biglisting{../../Problems/src/problem-2-1.lisp}
+
+\[
+	\Bigl(sqrt\; \bigl(+\; (*\; arg1\; arg1)\; (*\; arg2\; arg2)\bigr)\!\Bigr)
+\]
+
+\begin{enumerate}
+	\item $\bigl(+\; (*\; arg1\; arg1)\; (*\; arg2\; arg2)\bigr)$:
+	\begin{enumerate}
+		\item $(*\; arg1\; arg1)$:
+		\begin{enumerate}
+			\item $arg1 \to arg1$;
+			\item $arg1 \to arg1$;
+			\item применение <<$*$>> к $arg1, arg1$;
+			\item \underline{результат}: $(arg1)^2$.
+		\end{enumerate}
+		\item $(*\; arg2\; arg2)$:
+		\begin{enumerate}
+			\item $arg2 \to arg2$;
+			\item $arg2 \to arg2$;
+			\item применение <<$*$>> к $arg2, arg2$;
+			\item \underline{результат}: $(arg2)^2$.
+		\end{enumerate}
+		\item применение <<$+$>> к $(arg1)^2, (arg2)^2$;
+		\item \underline{результат}: $(arg1)^2 + (arg2)^2$.
+	\end{enumerate}
+	\item применение $sqrt$ к $(arg1)^2 + (arg2)^2$;
+	\item \underline{результат}: $\sqrt{(arg1)^2 + (arg2)^2}$.
+\end{enumerate}
