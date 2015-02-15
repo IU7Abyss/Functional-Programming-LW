@@ -511,3 +511,16 @@
 	
 	\foreach \i in {cell1,cell2,cell3}{\draw[fill=red] (c1 \i)circle(2pt) (c2 \i)circle(2pt);}
 \end{tikzpicture}\end{center}
+
+
+
+\section{Вывод}
+
+В данной лабораторной работе было изучено понятие \textit{cons-ячейки} и составление \textit{диаграммы представления списка в виде cons-ячеек}. Помимо определения новой функции при помощи макроса \verb|defun|, так же были рассмотрены такие функции как:
+\begin{itemize}
+	\item \verb|quote| или \verb|'| --- блокирует вычисление выражения;
+	\item \verb|car| --- возвращает \textit{car-часть cons-ячейки};
+	\item \verb|car| --- возвращает \textit{cdr-часть cons-ячейки};
+	\item \verb|cons| --- создаёт новую \textit{cons-ячейку}, у которой \textit{car-часть} принимает первый аргумент, а \textit{cdr-часть} --- второй аргумент;
+	\item \verb|list| --- возвращает \textit{список} из элементов переданных ей в качестве аргументов.
+\end{itemize}
