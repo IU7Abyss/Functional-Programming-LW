@@ -156,3 +156,32 @@
 	\item применение $sqrt$ к $(arg1)^2 + (arg2)^2$;
 	\item \underline{результат}: $\sqrt{(arg1)^2 + (arg2)^2}$.
 \end{enumerate}
+
+
+\newpage
+\problem Функция вычисляет объём прямоугольного параллелепипеда по 3-м его сторонам.
+
+\biglisting{../../Problems/src/problem-2-2.lisp}
+
+\begin{itemize}
+	\item[$\longrightarrow$] $(volume\!-\!rect\!-\!parallepiped\; q\; w\; e)$;
+	\item $q \to q$;
+	\item $w \to w$;
+	\item $e \to e$;
+	\item[$\Longrightarrow$] применение $volume\!-\!rect\!-\!parallepiped$ к $q, w, e$:
+	\begin{itemize}
+		\item[\textbullet] $arg1 \to q$;
+		\item[\textbullet] $arg2 \to w$;
+		\item[\textbullet] $arg3 \to e$;
+		\item[$\longrightarrow$] $(*\; arg1\; arg2\; arg3)$:
+		\begin{itemize}
+			\item[\textbullet] $arg1 \to q$;
+			\item[\textbullet] $arg2 \to w$;
+			\item[\textbullet] $arg3 \to e$;
+			\item[$\Longrightarrow$] применение <<$*$>> к $arg1, arg2, arg3$;
+			\item[$\Longrightarrow$] \underline{результат}: $q \cdot w \cdot e$.
+		\end{itemize}
+		
+	\end{itemize}
+	\item[$\Longrightarrow$] \underline{результат}: $q \cdot w \cdot e$.
+\end{itemize}
