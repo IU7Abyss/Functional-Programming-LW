@@ -13,14 +13,6 @@
 
 
 
-% Форматирование стандартных заголовков
-%\usepackage{titlesec}
-
-%\titleformat*{\paragraph}{\large\bfseries}
-
-
-
-
 \usepackage{tikz}
 \usetikzlibrary{arrows, arrows.meta, shapes, positioning, calc}
 
@@ -62,14 +54,6 @@
 	\paragraph{Задание \arabic{section}.\arabic{problemcounter}}%
 }
 
-%\newcounter{problemcounter}[section]
-%\newcommand{\problem}{%
-%	\addtocounter{problemcounter}{1}%
-%	{\noindent\bf Задание \arabic{section}.\arabic{problemcounter}\hspace{0.3cm}}%
-%}
-
-
-
 
 
 %%% Код
@@ -78,6 +62,7 @@
 \lstset{
 	language = Lisp,
 	frame = single,
+	showstringspaces=false,
 	literate={а}{{\selectfont\char224}}1
 	{б}{{\selectfont\char225}}1
 	{в}{{\selectfont\char226}}1
@@ -144,4 +129,8 @@
 	{Э}{{\selectfont\char221}}1
 	{Ю}{{\selectfont\char222}}1
 	{Я}{{\selectfont\char223}}1
+}
+
+\newcommand{\biglisting}[1]{%
+	\lstinputlisting[numbers=left]{#1}%
 }
