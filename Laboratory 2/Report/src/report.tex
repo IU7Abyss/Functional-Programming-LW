@@ -95,3 +95,24 @@
 	\item применение $equal$ к $4, 6$;
 	\item \underline{результат}: NIL.
 \end{enumerate}
+
+
+\problem $\Bigl(equal\; \bigl(abs\; (-\; 2\; 4)\bigr)\; 3\Bigr)$
+
+\begin{enumerate}
+	\item $\bigl(abs\; (-\; 2\; 4)\bigr)$:
+	\begin{enumerate}
+		\item $(-\; 2\; 4)$:
+		\begin{enumerate}
+			\item $2 \to 2$;
+			\item $4 \to 4$;
+			\item применение <<$-$>> к $2, 4$;
+			\item \underline{результат}: $-2$;
+		\end{enumerate}
+		\item применение $abs$ к $-2$;
+		\item \underline{результат}: $2$;
+	\end{enumerate}
+	\item $3 \to 3$;
+	\item применение $equal$ к $2, 3$;
+	\item \underline{результат}: NIL.
+\end{enumerate}
