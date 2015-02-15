@@ -3,7 +3,7 @@
 \section{Представить списки в виде списочных ячеек}
 
 
-\paragraph{Задание 1.1} $'(open\; close\; halph)$
+\problem $'(open\; close\; halph)$
 \vfill
 
 \begin{center}\begin{tikzpicture}
@@ -22,7 +22,7 @@
 \end{tikzpicture}\end{center}
 
 
-\paragraph{Задание 1.2} $'\bigl((open1)\;(close2)\;(halph3)\bigr)$
+\problem $'\bigl((open1)\;(close2)\;(halph3)\bigr)$
 \vfill
 
 \begin{center}\begin{tikzpicture}
@@ -55,7 +55,7 @@
 \end{tikzpicture}\end{center}
 \vfill
 
-\paragraph{Задание 1.3} $'\biggl((one)\; f\!or\; all\; \Bigl(and\; \bigl(me\; (f\!or\; you)\bigr)\Bigr)\biggr)$
+\problem $'\biggl((one)\; f\!or\; all\; \Bigl(and\; \bigl(me\; (f\!or\; you)\bigr)\Bigr)\biggr)$
 \vfill
 
 \begin{center}\begin{tikzpicture}
@@ -115,7 +115,7 @@
 
 
 \newpage
-\paragraph{Задание 1.4} $'\bigl((tool)\;(call)\bigr)$
+\problem $'\bigl((tool)\;(call)\bigr)$
 \vfill
 
 \begin{center}\begin{tikzpicture}
@@ -142,7 +142,7 @@
 \vfill
  
 
-\paragraph{Задание 1.5} $'\Bigl((tool1)\;\bigl((call2)\bigr)\;\bigl((sell)\bigr)\Bigr)$
+\problem $'\Bigl((tool1)\;\bigl((call2)\bigr)\;\bigl((sell)\bigr)\Bigr)$
 \vfill
 
 \begin{center}\begin{tikzpicture}
@@ -183,7 +183,7 @@
 \vfill
 
 
-\paragraph{Задание 1.6}$'\Bigl(\bigl((tool)\;(call)\bigr)\;\bigl((sell)\bigr)\Bigr)$
+\problem $'\Bigl(\bigl((tool)\;(call)\bigr)\;\bigl((sell)\bigr)\Bigr)$
 \vfill
 
 \begin{center}\begin{tikzpicture}
@@ -234,20 +234,20 @@
 \newpage
 \section{Используя только функции \texttt{CAR} и \texttt{CDR}, написать выражение}
 
-\paragraph{Задание 2.1} Возвращающие второй элемент списка
+\problem Возвращающие второй элемент списка
 
 \begin{lstlisting}
 (car (cdr example-list)) == (cadr example-list)
 \end{lstlisting}
 
 
-\paragraph{Задание 2.2} Возвращающие третий элемент списка
+\problem Возвращающие третий элемент списка
 \begin{lstlisting}
 (car (cdr (cdr example-list))) == (caddr example-list)
 \end{lstlisting}
 
 
-\paragraph{Задание 2.3} Возвращающие четвёртый элемент списка
+\problem Возвращающие четвёртый элемент списка
 \begin{lstlisting}
 (cadddr example-list)
 \end{lstlisting}
@@ -256,114 +256,123 @@
 
 \section{Что будет в результате вычисления выражения}
 
+
+
+
+
+
+
+
 \section{Напишите результат вычисления выражения}
 
-\paragraph{Задание 4.1} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (list 'Fred 'and 'Wilma) => (FRED AND WILMA)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.2} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (list 'Fred '(and Wilma)) => (FRED (AND WILMA))
 \end{lstlisting}
 
 
-\paragraph{Задание 4.3} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (cons Nil Nil) => (NIL)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.4} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (cons T Nil) => (T)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.5} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (cons Nil T) => (NIL . T)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.6} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (list Nil) => (NIL)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.7} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (cons '(T) Nil) => ((T))
 \end{lstlisting}
 
 
-\paragraph{Задание 4.8} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (list '(one two) '(free temp)) => ((ONE TWO) (FREE TEMP))
 \end{lstlisting}
 
 
-\paragraph{Задание 4.9} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (cons 'Fred '(and Wilma)) => (FRED AND WILMA)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.10} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (cons 'Fred '(Wilma)) => (FRED WILMA)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.11} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (list Nil Nil) => (NIL NIL)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.12} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (list T Nil) => (T NIL)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.13} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (list Nil T) => (NIL T)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.14} \hfill
+\problem \hfill
+
+
 
 \begin{lstlisting}
 (cons T (list Nil)) => (T NIL)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.15} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (list '(T) Nil) => ((T) NIL)
 \end{lstlisting}
 
 
-\paragraph{Задание 4.16} \hfill
+\problem \hfill
 
 \begin{lstlisting}
 (cons '(one two) '(free temp)) => ((ONE TWO) FREE TEMP)
