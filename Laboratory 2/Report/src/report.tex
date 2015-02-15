@@ -1,1 +1,20 @@
 % !TEX root = main.tex
+
+\section{Для указанных выражений составить диаграмму вычисления}
+
+\problem $\bigl(equal\; 3\; (abs -\!3)\bigr)$
+
+\begin{enumerate}
+	\item $3 \to 3$;
+	\item $(abs -\!3)$;
+	\begin{enumerate}
+		\item $-3 \to -3$;
+		\item применение $abs$ к $-3$;
+		\item \underline{результат}: $3$;
+	\end{enumerate}
+	\item применение $equal$ к $3, 3$
+	\item \underline{результат}: T;
+\end{enumerate}
+
+
+\problem $\bigl(equal\; (+\; 1\; 2)\; 3\bigr)$
