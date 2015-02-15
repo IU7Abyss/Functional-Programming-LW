@@ -13,6 +13,14 @@
 
 
 
+% Форматирование стандартных заголовков
+%\usepackage{titlesec}
+
+%\titleformat*{\paragraph}{\large\bfseries}
+
+
+
+
 \usepackage{tikz}
 \usetikzlibrary{arrows, arrows.meta, shapes, positioning, calc}
 
@@ -45,6 +53,22 @@
 %%% Вставка иллюстраций
 \usepackage{graphicx}
 \graphicspath{{img/}}
+
+
+
+\newcounter{problemcounter}[section]
+\newcommand{\problem}{%
+	\addtocounter{problemcounter}{1}%
+	\paragraph{Задание \arabic{section}.\arabic{problemcounter}}%
+}
+
+%\newcounter{problemcounter}[section]
+%\newcommand{\problem}{%
+%	\addtocounter{problemcounter}{1}%
+%	{\noindent\bf Задание \arabic{section}.\arabic{problemcounter}\hspace{0.3cm}}%
+%}
+
+
 
 
 
