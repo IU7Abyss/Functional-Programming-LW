@@ -192,56 +192,56 @@
 \problem \hfill
 
 \begin{lstlisting}
-() => 
+(list 'a 'b c) => Unbound variable C
 \end{lstlisting}
 
 
 \problem \hfill
 
 \begin{lstlisting}
-() => 
+(cons 'a (b c)) => Unbound variable C
 \end{lstlisting}
 
 
 \problem \hfill
 
 \begin{lstlisting}
-() => 
+(cons 'a '(b c)) => (A B C) 
 \end{lstlisting}
 
 
 \problem \hfill
 
 \begin{lstlisting}
-() => 
+(caddr '(1 2 3 4 5)) => 3
 \end{lstlisting}
 
 
 \problem \hfill
 
 \begin{lstlisting}
-() => 
+(cons 'a 'b 'c) => Too many arguments
 \end{lstlisting}
 
 
 \problem \hfill
 
 \begin{lstlisting}
-() => 
+(list 'a (b c)) => Unbound variable C
 \end{lstlisting}
 
 
 \problem \hfill
 
 \begin{lstlisting}
-() => 
+(list a '(b c)) => Unbound variable A
 \end{lstlisting}
 
 
 \problem \hfill
 
 \begin{lstlisting}
-() => 
+(list (+ 1 (length '(1 2 3)))) => (4) 
 \end{lstlisting}
 
 
