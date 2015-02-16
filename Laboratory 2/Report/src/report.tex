@@ -190,6 +190,42 @@
 
 \biglisting{../../Problems/src/problem-2-3.lisp}
 
+\begin{itemize}
+	\item $q \to q$;
+	\item $w \to w$;
+	\item[$\longrightarrow$] $(problem\!-\!2\!-\!3\; q\; w)$:
+	\begin{itemize}
+		\item[\textbullet] $leq \to q$;
+		\item[\textbullet] $hypotenuse \to w$;
+		\item[$\longrightarrow$] $\Bigl(\!sqrt\; \bigl(-\; (*\; hypotenuse\; hypotenuse)\; (*\; leg\; leg)\bigr)\!\Bigr)$:
+		\begin{itemize}
+			\item[$\longrightarrow$] $\bigl(-\; (*\; hypotenuse\; hypotenuse)\; (*\; leg\; leg)\bigr)$:
+			\begin{itemize}
+				\item[$\longrightarrow$] $(*\; hypotenuse\; hypotenuse)$:
+				\begin{enumerate}
+					\item[\textbullet] $hypotenuse \to hypotenuse$;
+					\item[\textbullet] $hypotenuse \to hypotenuse$;
+					\item[$\Longrightarrow$] применение <<$*$>> к $hypotenuse, hypotenuse$;
+					\item[$\Longrightarrow$] \underline{результат}: $(hypotenuse)^2$.
+				\end{enumerate}
+				\item[$\longrightarrow$] $(*\; leg\; leg)$:
+				\begin{enumerate}
+					\item[\textbullet] $leg \to leg$;
+					\item[\textbullet] $leg \to leg$;
+					\item[$\Longrightarrow$] применение <<$*$>> к $leg, leg$;
+					\item[$\Longrightarrow$] \underline{результат}: $(leg)^2$.
+				\end{enumerate}
+				\item[$\Longrightarrow$] применение <<$-$>> к $(hypotenuse)^2, (leg)^2$;
+				\item[$\Longrightarrow$] \underline{результат}: $(hypotenuse)^2 - (leg)^2$.
+			\end{itemize}
+			\item[$\Longrightarrow$] применение $sqrt$ к $(hypotenuse)^2 - (leg)^2$;
+			\item[$\Longrightarrow$] \underline{результат}: $\sqrt{(hypotenuse)^2 - (leg)^2}$.
+		\end{itemize}
+		\item[$\Longrightarrow$] применение $problem\!-\!2\!-\!3$ к $q, w$;
+		\item[$\Longrightarrow$] \underline{результат}: $\sqrt{q^2 - w^2}$.
+	\end{itemize}
+\end{itemize}
+
 
 \section{Вычислить результаты выражений}
 
