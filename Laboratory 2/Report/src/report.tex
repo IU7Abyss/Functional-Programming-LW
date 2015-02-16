@@ -44,18 +44,21 @@
 
 \problem $\bigl(equal\; (*\; 4\; 7)\; 21\bigr)$
 
-\begin{enumerate}
-	\item $(*\; 4\; 7)$:
-	\begin{enumerate}
-		\item $4 \to 4$;
-		\item $7 \to 7$;
-		\item применение <<$*$>> к $4, 7$;
-		\item \underline{результат}: $28$;
-	\end{enumerate}
-	\item $21 \to 21$;
-	\item применение $equal$ к $28, 21$;
-	\item \underline{результат}: NIL.
-\end{enumerate}
+\begin{itemize}
+	\item[$\longrightarrow$] $\bigl(equal\; (*\; 4\; 7)\; 21\bigr)$:
+	\begin{itemize}
+		\item[$\longrightarrow$] $(*\; 4\; 7)$:
+		\begin{itemize}
+			\item[\textbullet] $4 \to 4$;
+			\item[\textbullet] $7 \to 7$;
+			\item[$\Longrightarrow$] применение <<$*$>> к $4, 7$;
+			\item[$\Longrightarrow$] \underline{результат}: $28$.
+		\end{itemize}
+		\item[\textbullet] $21 \to 21$;
+		\item[$\Longrightarrow$] применение $equal$ к $28, 21$;
+		\item[$\Longrightarrow$] \underline{результат}: NIL.
+	\end{itemize}
+\end{itemize}
 
 
 \newpage
