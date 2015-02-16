@@ -308,7 +308,32 @@
 \end{lstlisting}
 
 
+\problem \hfill
+
+\begin{lstlisting}
+(apply #'cons '(t NIL)) => (T) 
+\end{lstlisting}
 
 
+\problem \hfill
+\begin{lstlisting}
+(list 'eval NIL) => (EVAL NIL)
+\end{lstlisting}
 
 
+\problem \hfill
+\begin{lstlisting}
+(eval (list 'cons t nil)) => (T)
+\end{lstlisting}
+
+
+\problem \hfill
+\begin{lstlisting}
+(eval NIL) => NIL
+\end{lstlisting}
+
+
+\problem \hfill
+\begin{lstlisting}
+(eval (list 'eval NIL)) => NIL
+\end{lstlisting}
