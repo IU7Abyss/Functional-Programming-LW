@@ -249,6 +249,34 @@
 
 \biglisting{../../Problems/src/problem-2-4.lisp}
 
+\begin{itemize}
+	\item $a \to a$;
+	\item $b \to b$;
+	\item $h \to h$;
+	\item[$\longrightarrow$] $(trapezoid\!-\!area\; a\; b\; h)$:
+	\begin{itemize}
+		\item[\textbullet] $parallel\!-\!side1 \to a$;
+		\item[\textbullet] $parallel\!-\!side2 \to b$;
+		\item[\textbullet] $height \to h$;
+		\item[$\longrightarrow$] $\bigl(*\; 0.5\; height\; (+\; parallel\!-\!side1\; parallel\!-\!side2)\bigr)$:
+		\begin{itemize}
+			\item[\textbullet] $0.5 \to 0.5$;
+			\item[\textbullet] $height \to height$;
+			\item[$\longrightarrow$] $(+\; parallel\!-\!side1\; parallel\!-\!side2)$:
+			\begin{itemize}
+				\item[\textbullet] $parallel\!-\!side1 \to parallel\!-\!side1$;
+				\item[\textbullet] $parallel\!-\!side2 \to parallel\!-\!side2$;
+				\item[$\Longrightarrow$] применение <<$+$>> к $parallel\!-\!side1, parallel\!-\!side2$;
+				\item[$\Longrightarrow$] \underline{результат}: $parallel\!-\!side1 + parallel\!-\!side2$.
+			\end{itemize}
+			\item[$\Longrightarrow$] применение <<$*$>> к $0.5,\; height,\; parallel\!-\!side1 + parallel\!-\!side2$;
+			\item[$\Longrightarrow$] \underline{результат}: $0.5 \cdot height \cdot (parallel\!-\!side1 + parallel\!-\!side2)$.
+		\end{itemize}
+		\item[$\Longrightarrow$] применение $trapezoid\!-\!area$ к $a,\; b,\; h$;
+		\item[$\Longrightarrow$] \underline{результат}: $0.5 \cdot h \cdot (a + b)$.
+	\end{itemize}
+\end{itemize}
+
 
 
 \section{Вычислить результаты выражений}
