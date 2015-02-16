@@ -64,24 +64,27 @@
 \newpage
 \problem $\bigl(equal\; (*\; 2\; 3)\; (+\; 7\; 2) \bigr)$
 
-\begin{enumerate}
-	\item $(*\; 2\; 3)$:
-	\begin{enumerate}
-		\item $2 \to 2$;
-		\item $3 \to 3$;
-		\item применение <<$*$>> к $2, 3$;
-		\item \underline{результат}: $6$;
-	\end{enumerate}
-	\item $(+\; 7\; 2)$:
-	\begin{enumerate}
-		\item $7 \to 7$;
-		\item $2 \to 2$;
-		\item применение <<$+$>> к $7, 2$;
-		\item \underline{результат}: $9$;
-	\end{enumerate}
-	\item применение $equal$ к $6, 9$;
-	\item \underline{результат}: NIL.
-\end{enumerate}
+\begin{itemize}
+	\item[$\longrightarrow$] $\bigl(equal\; (*\; 2\; 3)\; (+\; 7\; 2) \bigr)$:
+	\begin{itemize}
+		\item[$\longrightarrow$] $(*\; 2\; 3)$:
+		\begin{itemize}
+			\item[\textbullet] $2 \to 2$;
+			\item[\textbullet] $3 \to 3$;
+			\item[$\Longrightarrow$] применение <<$*$>> к $2, 3$;
+			\item[$\Longrightarrow$] \underline{результат}: $6$.
+		\end{itemize}
+		\item[$\longrightarrow$] $(+\; 7\; 2)$:
+		\begin{itemize}
+			\item[\textbullet] $7 \to 7$;
+			\item[\textbullet] $2 \to 2$;
+			\item[$\Longrightarrow$] применение <<$+$>> к $7, 2$;
+			\item[$\Longrightarrow$] \underline{результат}: $9$.
+		\end{itemize}
+		\item[$\Longrightarrow$] применение $equal$ к $6, 9$;
+		\item[$\Longrightarrow$] \underline{результат}: NIL.
+	\end{itemize}
+\end{itemize}
 
 
 \problem $\bigl(equal\; (-\; 7\; 3)\; (*\; 3\; 2) \bigr)$
