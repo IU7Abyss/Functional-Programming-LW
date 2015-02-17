@@ -55,7 +55,7 @@
 \end{tikzpicture}\end{center}
 \vfill
 
-\problem $'\biggl((one)\; f\!or\; all\; \Bigl(and\; \bigl(me\; (f\!or\; you)\bigr)\Bigr)\biggr)$
+\problem $'\biggl((one)\; f\!or\; all\; \Bigl(and\; \bigl(me\; (f\!or\; you)\bigr)\!\Bigr)\!\biggr)$
 \vfill
 
 \begin{center}\begin{tikzpicture}
@@ -242,19 +242,21 @@
 
 
 \problem Возвращающие третий элемент списка
+
 \begin{lstlisting}
 (car (cdr (cdr example-list))) == (caddr example-list)
 \end{lstlisting}
 
 
 \problem Возвращающие четвёртый элемент списка
+
 \begin{lstlisting}
 (cadddr example-list)
 \end{lstlisting}
 
 
 
-\section{Что будет в результате вычисления выражения}
+\section{Вычислить результат выражения}
 
 \problem \hfill
 
@@ -284,13 +286,10 @@
 \end{lstlisting}
 
 
-
-\section{Напишите результат вычисления выражения}
-
 \problem \hfill
 
 \begin{lstlisting}
-(list 'Fred 'and 'Wilma) => (FRED AND WILMA)
+(list 'Fred 'and Wilma) => Unbound variable WILMA
 \end{lstlisting}
 
 
@@ -332,7 +331,7 @@
 \problem \hfill
 
 \begin{lstlisting}
-(cons '(T) Nil) => ((T))
+(cons (T) Nil) => Undefined function T
 \end{lstlisting}
 
 
@@ -380,8 +379,6 @@
 
 \problem \hfill
 
-
-
 \begin{lstlisting}
 (cons T (list Nil)) => (T NIL)
 \end{lstlisting}
@@ -390,15 +387,15 @@
 \problem \hfill
 
 \begin{lstlisting}
-(list '(T) Nil) => ((T) NIL)
+(list (T) Nil) => Undefined function T
 \end{lstlisting}
 
 
 \problem \hfill
-
 \begin{lstlisting}
 (cons '(one two) '(free temp)) => ((ONE TWO) FREE TEMP)
 \end{lstlisting}
+
 
 
 \newpage
@@ -514,7 +511,7 @@
 
 
 
-\section{Вывод}
+\section{Заключение}
 
 В данной лабораторной работе было изучено понятие \textit{списочной ячейки} и составление \textit{диаграммы представления списка в виде списочных ячеек}. Помимо определения новой функции при помощи макроса \verb|defun|, так же были рассмотрены такие функции как:
 \begin{itemize}
