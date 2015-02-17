@@ -3,7 +3,6 @@
 		(numberp x)
 		(plusp x)))
 
-
 (defun pred2 (x)
 	(and
 		(plusp x)
