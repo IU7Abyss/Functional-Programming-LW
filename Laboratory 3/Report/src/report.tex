@@ -17,9 +17,24 @@
 \biglisting{../../Problems/src/problem-1-3.lisp}
 
 
-\problem Функция принимает три числа и возвращает \verb|T| если первое число расположено между вторым и третьим.
+\problem Функция принимает три числа и возвращает \verb|T| если первое число расположено между вторым и третьим.\\
 
-\biglisting{../../Problems/src/problem-1-4.lisp}
+\noindent
+Возможны следующие реализации данной функции:
+\begin{itemize}
+	\item с использованием функции \verb|SORT|;
+	\biglisting{../../Problems/src/problem-1-4-1.lisp}
+	
+	\item с помощью специального оператора \verb|IF|;
+	\biglisting{../../Problems/src/problem-1-4-2.lisp}
+	
+	\item c помощью макросов \verb|AND| и \verb|OR|;
+	\biglisting{../../Problems/src/problem-1-4-3.lisp}
+	
+	\item c помощью макроса \verb|COND|.
+	\biglisting{../../Problems/src/problem-1-4-4.lisp}
+\end{itemize}
+
 
 
 
