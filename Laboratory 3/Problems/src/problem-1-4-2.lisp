@@ -1,0 +1,5 @@
+(defun is-first-between2 (arg1 arg2 arg3)
+    (if (< arg2 arg1)
+        (< arg1 arg3)
+        (if (< arg3 arg1)
+            (< arg1 arg2))
