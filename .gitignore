@@ -9,3 +9,6 @@
 
 ## Build tool auxiliary files:
 *.synctex.gz
+
+## For Max users
+.DS_Store
