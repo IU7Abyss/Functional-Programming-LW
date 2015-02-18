@@ -140,15 +140,8 @@
 \section{Написать функцию и составить для неё диаграмму вычисления}
 
 \problem Функция вычисляет гипотенузу прямоугольного треугольника по заданным катетам.
-\vfill
 
 \biglisting{../../Problems/src/problem-2-1.lisp}
-\vfill
-
-\[
-	\Bigl(sqrt\; \bigl(+\; (*\; arg1\; arg1)\; (*\; arg2\; arg2)\bigr)\!\Bigr)
-\]
-\vfill
 
 \begin{itemize}
 	\item[$\longrightarrow$] $(hypotenuse\!-\!rect\!-\!triangle\; q\; w)$
@@ -168,23 +161,24 @@
 				\begin{enumerate}
 					\item[\textbullet] вычисляется $leg1 \to q$;
 					\item[\textbullet] вычисляется $leg1 \to q$;
-					\item[$\Longrightarrow$] применение <<$*$>> к $q, q$;
-					\item[$\Longrightarrow$] \underline{возвращается результат}: $q^2$.
 				\end{enumerate}
+				\item[$\Longrightarrow$] применение <<$*$>> к $q, q$;
+				\item[$\Longrightarrow$] \underline{возвращается результат}: $q^2$.
 				\item[$\longrightarrow$] $(*\; leg2\; leg2)$:
 				\begin{enumerate}
 					\item[\textbullet] $leg2 \to w$;
 					\item[\textbullet] $leg2 \to w$;
-					\item[$\Longrightarrow$] применение <<$*$>> к $w, w$;
-					\item[$\Longrightarrow$] \underline{возвращается результат}: $w^2$.
 				\end{enumerate}
-				\item[$\Longrightarrow$] применение <<$+$>> к $q^2, w^2$;
-				\item[$\Longrightarrow$] \underline{возвращается результат}: $q^2 + w^2$.
+				\item[$\Longrightarrow$] применение <<$*$>> к $w, w$;
+				\item[$\Longrightarrow$] \underline{возвращается результат}: $w^2$.
 			\end{enumerate}
+			\item[$\Longrightarrow$] применение <<$+$>> к $q^2, w^2$;
+			\item[$\Longrightarrow$] \underline{возвращается результат}: $q^2 + w^2$.
 		\end{itemize}
 		\item[$\Longrightarrow$] применение $sqrt$ к $q^2 + w^2$;
 		\item[$\Longrightarrow$] \underline{возвращается результат}: $\sqrt{q^2 + w^2}$.
 	\end{itemize}
+	\item[$\Longrightarrow$] \underline{результат}: $\sqrt{q^2 + w^2}$.
 \end{itemize}
 
 
@@ -194,24 +188,26 @@
 
 \begin{itemize}
 	\item[$\longrightarrow$] $(volume\!-\!rect\!-\!parallepiped\; q\; w\; e)$;
-	\item $q \to q$;
-	\item $w \to w$;
-	\item $e \to e$;
-	\item[$\Longrightarrow$]  $volume\!-\!rect\!-\!parallepiped$ к $q, w, e$:
 	\begin{itemize}
-		\item[\textbullet] создаётся переменная $leg1$ со значением $q$;
-		\item[\textbullet] создаётся переменная $leg2$ со значением $w$;
-		\item[\textbullet] создаётся переменная $leg3$ со значением $e$;
-		\item[$\longrightarrow$] $(*\; leg1\; leg2\; leg3)$:
+		\item[\textbullet] вычисляется $q \to q$;
+		\item[\textbullet] вычисляется $w \to w$;
+		\item[\textbullet] вычисляется $e \to e$;
+		\item[$\Longrightarrow$] применение $volume\!-\!rect\!-\!parallepiped$ к $q$, $w$, $e$:
 		\begin{itemize}
-			\item[\textbullet] вычисляется $leg1 \to q$;
-			\item[\textbullet] вычисляется $leg2 \to w$;
-			\item[\textbullet] вычисляется $leg3 \to e$;
-			\item[$\Longrightarrow$] применение <<$*$>> к $q$, $w$, $e$;
-			\item[$\Longrightarrow$] \underline{возвращается результат}: $q \cdot w \cdot e$.
+			\item[\textbullet] создаётся переменная $leg1$ со значением $q$;
+			\item[\textbullet] создаётся переменная $leg2$ со значением $w$;
+			\item[\textbullet] создаётся переменная $leg3$ со значением $e$;
+			\item[$\longrightarrow$] $(*\; leg1\; leg2\; leg3)$:
+			\begin{itemize}
+				\item[\textbullet] вычисляется $leg1 \to q$;
+				\item[\textbullet] вычисляется $leg2 \to w$;
+				\item[\textbullet] вычисляется $leg3 \to e$;
+				\item[$\Longrightarrow$] применение <<$*$>> к $q$, $w$, $e$;
+				\item[$\Longrightarrow$] \underline{возвращается результат}: $q \cdot w \cdot e$.
+			\end{itemize}
 		\end{itemize}
+		\item[$\Longrightarrow$] \underline{результат}: $q \cdot w \cdot e$.
 	\end{itemize}
-	\item[$\Longrightarrow$] \underline{результат}: $q \cdot w \cdot e$.
 \end{itemize}
 
 
