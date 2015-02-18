@@ -8,16 +8,16 @@
 \begin{itemize}
 	\item[$\longrightarrow$]$\bigl(equal\; 3\; (abs -\!3)\bigr)$:
 	\begin{itemize}
-		\item[\textbullet] вычисляется $3 \to 3$;
+		\item[\textbullet] вычисляется $3$ к $3$;
 		\item[$\longrightarrow$] $(abs -\!3)$:
 		\begin{itemize}
-			\item[\textbullet] вычисляется $-3 \to -3$;
-			\item[$\Longrightarrow$] применение $abs$ к $-3$;
-			\item[$\Longrightarrow$] \underline{возвращается результат}: $3$.
+			\item[\textbullet] вычисляется $-3$ к $-3$;
 		\end{itemize}
-		\item[$\Longrightarrow$] применение $equal$ к $3, 3$;
-		\item[$\Longrightarrow$] \underline{возвращается результат}: T.
+		\item[$\Longrightarrow$] применение $abs$ к $-3$;
+		\item[$\Longrightarrow$] \underline{возвращается результат}: $3$;
 	\end{itemize}
+	\item[$\Longrightarrow$] применение $equal$ к $3, 3$;
+	\item[$\Longrightarrow$] \underline{возвращается результат}: T.
 \end{itemize}
 \vfill
 
@@ -29,15 +29,15 @@
 	\begin{itemize}
 		\item[$\longrightarrow$] $(+\; 1\; 2)$:
 		\begin{itemize}
-			\item[\textbullet] вычисляется $1 \to 1$;
-			\item[\textbullet] вычисляется $2 \to 2$;
-			\item[$\Longrightarrow$] применение <<$+$>> к $1, 2$;
-			\item[$\Longrightarrow$] \underline{возвращается результат}: $3$.
+			\item[\textbullet] вычисляется $1$ к $1$;
+			\item[\textbullet] вычисляется $2$ к $2$;
 		\end{itemize}
-		\item[\textbullet] $3 \to 3$;
-		\item[$\Longrightarrow$] применение $equal$ к $3, 3$;
-		\item[$\Longrightarrow$] \underline{возвращается результат}: T.
+		\item[$\Longrightarrow$] применение <<$+$>> к $1$, $2$;
+		\item[$\Longrightarrow$] \underline{возвращается результат}: $3$;
+		\item[\textbullet] вычисляется $3$ к $3$;
 	\end{itemize}
+	\item[$\Longrightarrow$] применение $equal$ к $3$, $3$;
+	\item[$\Longrightarrow$] \underline{возвращается результат}: T.
 \end{itemize}
 \vfill
 
@@ -49,19 +49,20 @@
 	\begin{itemize}
 		\item[$\longrightarrow$] $(*\; 4\; 7)$:
 		\begin{itemize}
-			\item[\textbullet] вычисляется $4 \to 4$;
-			\item[\textbullet] вычисляется $7 \to 7$;
-			\item[$\Longrightarrow$] применение <<$*$>> к $4, 7$;
-			\item[$\Longrightarrow$] \underline{возвращается результат}: $28$.
+			\item[\textbullet] вычисляется $4$ к $4$;
+			\item[\textbullet] вычисляется $7$ к $7$;
 		\end{itemize}
-		\item[\textbullet] вычисляется $21 \to 21$;
-		\item[$\Longrightarrow$] применение $equal$ к $28, 21$;
-		\item[$\Longrightarrow$] \underline{возвращается результат}: NIL.
+		\item[$\Longrightarrow$] применение <<$*$>> к $4$, $7$;
+		\item[$\Longrightarrow$] \underline{возвращается результат}: $28$.
+		\item[\textbullet] вычисляется $21$ к $21$;
 	\end{itemize}
+	\item[$\Longrightarrow$] применение $equal$ к $28$, $21$;
+	\item[$\Longrightarrow$] \underline{возвращается результат}: NIL.
 \end{itemize}
 
 
 \newpage
+\vfill
 \problem $\bigl(equal\; (*\; 2\; 3)\; (+\; 7\; 2) \bigr)$
 
 \begin{itemize}
@@ -69,22 +70,23 @@
 	\begin{itemize}
 		\item[$\longrightarrow$] $(*\; 2\; 3)$:
 		\begin{itemize}
-			\item[\textbullet] вычисляется $2 \to 2$;
-			\item[\textbullet] вычисляется $3 \to 3$;
-			\item[$\Longrightarrow$] применение <<$*$>> к $2, 3$;
-			\item[$\Longrightarrow$] \underline{возвращается результат}: $6$.
+			\item[\textbullet] вычисляется $2$ к $2$;
+			\item[\textbullet] вычисляется $3$ к $3$;
 		\end{itemize}
+		\item[$\Longrightarrow$] применение <<$*$>> к $2$, $3$;
+		\item[$\Longrightarrow$] \underline{возвращается результат}: $6$.
 		\item[$\longrightarrow$] $(+\; 7\; 2)$:
 		\begin{itemize}
-			\item[\textbullet] вычисляется $7 \to 7$;
-			\item[\textbullet] вычисляется $2 \to 2$;
-			\item[$\Longrightarrow$] применение <<$+$>> к $7, 2$;
-			\item[$\Longrightarrow$] \underline{возвращается результат}: $9$.
+			\item[\textbullet] вычисляется $7$ к $7$;
+			\item[\textbullet] вычисляется $2$ к $2$;
 		\end{itemize}
-		\item[$\Longrightarrow$] применение $equal$ к $6, 9$;
-		\item[$\Longrightarrow$] \underline{возвращается результат}: NIL.
+		\item[$\Longrightarrow$] применение <<$+$>> к $7$, $2$;
+		\item[$\Longrightarrow$] \underline{возвращается результат}: $9$.
 	\end{itemize}
+	\item[$\Longrightarrow$] применение $equal$ к $6$, $9$;
+	\item[$\Longrightarrow$] \underline{возвращается результат}: NIL.
 \end{itemize}
+\vfill
 
 
 \problem $\bigl(equal\; (-\; 7\; 3)\; (*\; 3\; 2) \bigr)$
@@ -94,49 +96,51 @@
 	\begin{itemize}
 		\item[$\longrightarrow$] $(-\; 7\; 3)$:
 		\begin{itemize}
-			\item[\textbullet] вычисляется $7 \to 7$;
-			\item[\textbullet] вычисляется $3 \to 3$;
-			\item[$\Longrightarrow$] применение <<$-$>> к $7, 3$;
-			\item[$\Longrightarrow$] \underline{возвращается результат}: $4$.
+			\item[\textbullet] вычисляется $7$ к $7$;
+			\item[\textbullet] вычисляется $3$ к $3$;
 		\end{itemize}
+		\item[$\Longrightarrow$] применение <<$-$>> к $7$, $3$;
+		\item[$\Longrightarrow$] \underline{возвращается результат}: $4$.
 		\item[$\longrightarrow$] $(*\; 3\; 2)$:
 		\begin{itemize}
-			\item[\textbullet] вычисляется $3 \to 3$;
-			\item[\textbullet] вычисляется $2 \to 2$;
-			\item[$\Longrightarrow$] применение <<$*$>> к $3, 2$;
-			\item[$\Longrightarrow$] \underline{вычисляется результат}: $6$.
+			\item[\textbullet] вычисляется $3$ к $3$;
+			\item[\textbullet] вычисляется $2$ к $2$;
 		\end{itemize}
-		\item[$\Longrightarrow$] применение $equal$ к $4, 6$;
-		\item[$\Longrightarrow$] \underline{вычисляется результат}: NIL.
+		\item[$\Longrightarrow$] применение <<$*$>> к $3$, $2$;
+		\item[$\Longrightarrow$] \underline{возвращается результат}: $6$.
 	\end{itemize}
+	\item[$\Longrightarrow$] применение $equal$ к $4$, $6$;
+	\item[$\Longrightarrow$] \underline{возвращается результат}: NIL.
 \end{itemize}
+\vfill
 
-
+\newpage
 \problem $\Bigl(equal\; \bigl(abs\; (-\; 2\; 4)\bigr)\; 3\Bigr)$
 
 \begin{itemize}
-	\item[$\longrightarrow$] $\Bigl(equal\; \bigl(abs\; (-\; 2\; 4)\bigr)\; 3\Bigr)$
+	\item[$\longrightarrow$] $\Bigl(equal\; \bigl(abs\; (-\; 2\; 4)\bigr)\; 3\Bigr)$:
 	\begin{itemize}
 		\item[$\longrightarrow$] $\bigl(abs\; (-\; 2\; 4)\bigr)$:
 		\begin{itemize}
 			\item[$\longrightarrow$] $(-\; 2\; 4)$:
 			\begin{itemize}
-				\item[\textbullet] вычисляется $2 \to 2$;
-				\item[\textbullet] вычисляется $4 \to 4$;
-				\item[$\Longrightarrow$] применение <<$-$>> к $2, 4$;
-				\item[$\Longrightarrow$] \underline{вычисляется результат}: $-2$.
+				\item[\textbullet] вычисляется $2$ к $2$;
+				\item[\textbullet] вычисляется $4$ к $4$;
 			\end{itemize}
-			\item[$\Longrightarrow$] применение $abs$ к $-2$;
-			\item[$\Longrightarrow$] \underline{вычисляется результат}: $2$.
+			\item[$\Longrightarrow$] применение <<$-$>> к $2$, $4$;
+			\item[$\Longrightarrow$] \underline{возвращается результат}: $-2$;
 		\end{itemize}
-		\item[\textbullet] $3 \to 3$;
-		\item[$\Longrightarrow$] применение $equal$ к $2, 3$;
-		\item[$\Longrightarrow$] \underline{вычисляется результат}: NIL.
+		\item[$\Longrightarrow$] применение $abs$ к $-2$;
+		\item[$\Longrightarrow$] \underline{возвращается результат}: $2$;
+		\item[\textbullet] вычисляется $3$ к $3$;
 	\end{itemize}
+	\item[$\Longrightarrow$] применение $equal$ к $2$, $3$;
+	\item[$\Longrightarrow$] \underline{возвращается результат}: NIL.
 \end{itemize}
 
 
 
+\newpage
 \section{Написать функцию и составить для неё диаграмму вычисления}
 
 \problem Функция вычисляет гипотенузу прямоугольного треугольника по заданным катетам.
@@ -146,8 +150,8 @@
 \begin{itemize}
 	\item[$\longrightarrow$] $(hypotenuse\!-\!rect\!-\!triangle\; q\; w)$
 	\begin{itemize}
-		\item[\textbullet] вычисляется $q \to q$;
-		\item[\textbullet] вычисляется $w \to w$;
+		\item[\textbullet] вычисляется $q$ к $q$;
+		\item[\textbullet] вычисляется $w$ к $w$;
 	\end{itemize}
 	\item[$\Longrightarrow$] запускается функция $hypotenuse\!-\!rect\!-\!triangle$;
 	\begin{itemize}
@@ -159,21 +163,21 @@
 			\begin{enumerate}
 				\item[$\longrightarrow$] $(*\; leg1\; leg1)$:
 				\begin{enumerate}
-					\item[\textbullet] вычисляется $leg1 \to q$;
-					\item[\textbullet] вычисляется $leg1 \to q$;
+					\item[\textbullet] вычисляется $leg1$ к $q$;
+					\item[\textbullet] вычисляется $leg1$ к $q$;
 				\end{enumerate}
-				\item[$\Longrightarrow$] применение <<$*$>> к $q, q$;
-				\item[$\Longrightarrow$] \underline{возвращается результат}: $q^2$.
+				\item[$\Longrightarrow$] применение <<$*$>> к $q$, $q$;
+				\item[$\Longrightarrow$] \underline{возвращается результат}: $q^2$;
 				\item[$\longrightarrow$] $(*\; leg2\; leg2)$:
 				\begin{enumerate}
-					\item[\textbullet] $leg2 \to w$;
-					\item[\textbullet] $leg2 \to w$;
+					\item[\textbullet] $leg2$ к $w$;
+					\item[\textbullet] $leg2$ к $w$;
 				\end{enumerate}
-				\item[$\Longrightarrow$] применение <<$*$>> к $w, w$;
-				\item[$\Longrightarrow$] \underline{возвращается результат}: $w^2$.
+				\item[$\Longrightarrow$] применение <<$*$>> к $w$, $w$;
+				\item[$\Longrightarrow$] \underline{возвращается результат}: $w^2$;
 			\end{enumerate}
-			\item[$\Longrightarrow$] применение <<$+$>> к $q^2, w^2$;
-			\item[$\Longrightarrow$] \underline{возвращается результат}: $q^2 + w^2$.
+			\item[$\Longrightarrow$] применение <<$+$>> к $q^2$, $w^2$;
+			\item[$\Longrightarrow$] \underline{возвращается результат}: $q^2 + w^2$;
 		\end{itemize}
 		\item[$\Longrightarrow$] применение $sqrt$ к $q^2 + w^2$;
 		\item[$\Longrightarrow$] \underline{возвращается результат}: $\sqrt{q^2 + w^2}$.
@@ -189,28 +193,29 @@
 \begin{itemize}
 	\item[$\longrightarrow$] $(volume\!-\!rect\!-\!parallepiped\; q\; w\; e)$;
 	\begin{itemize}
-		\item[\textbullet] вычисляется $q \to q$;
-		\item[\textbullet] вычисляется $w \to w$;
-		\item[\textbullet] вычисляется $e \to e$;
-		\item[$\Longrightarrow$] применение $volume\!-\!rect\!-\!parallepiped$ к $q$, $w$, $e$:
-		\begin{itemize}
-			\item[\textbullet] создаётся переменная $leg1$ со значением $q$;
-			\item[\textbullet] создаётся переменная $leg2$ со значением $w$;
-			\item[\textbullet] создаётся переменная $leg3$ со значением $e$;
-			\item[$\longrightarrow$] $(*\; leg1\; leg2\; leg3)$:
-			\begin{itemize}
-				\item[\textbullet] вычисляется $leg1 \to q$;
-				\item[\textbullet] вычисляется $leg2 \to w$;
-				\item[\textbullet] вычисляется $leg3 \to e$;
-				\item[$\Longrightarrow$] применение <<$*$>> к $q$, $w$, $e$;
-				\item[$\Longrightarrow$] \underline{возвращается результат}: $q \cdot w \cdot e$.
-			\end{itemize}
-		\end{itemize}
-		\item[$\Longrightarrow$] \underline{результат}: $q \cdot w \cdot e$.
+		\item[\textbullet] вычисляется $q$ к $q$;
+		\item[\textbullet] вычисляется $w$ к $w$;
+		\item[\textbullet] вычисляется $e$ к $e$;
 	\end{itemize}
+	\item[$\Longrightarrow$] применение $volume\!-\!rect\!-\!parallepiped$ к $q$, $w$, $e$:
+	\begin{itemize}
+		\item[\textbullet] создаётся переменная $leg1$ со значением $q$;
+		\item[\textbullet] создаётся переменная $leg2$ со значением $w$;
+		\item[\textbullet] создаётся переменная $leg3$ со значением $e$;
+		\item[$\longrightarrow$] $(*\; leg1\; leg2\; leg3)$:
+		\begin{itemize}
+			\item[\textbullet] вычисляется $leg1$ к $q$;
+			\item[\textbullet] вычисляется $leg2$ к $w$;
+			\item[\textbullet] вычисляется $leg3$ к $e$;
+		\end{itemize}
+		\item[$\Longrightarrow$] применение <<$*$>> к $q$, $w$, $e$;
+		\item[$\Longrightarrow$] \underline{возвращается результат}: $q \cdot w \cdot e$;
+	\end{itemize}
+	\item[$\Longrightarrow$] \underline{результат}: $q \cdot w \cdot e$.
 \end{itemize}
 
 
+\newpage
 \problem Функция по заданной гипотенузе и катету, вычисляет другой катет прямоугольного треугольника.
 
 \biglisting{../../Problems/src/problem-2-3.lisp}
