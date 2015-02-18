@@ -1,3 +1,3 @@
-(defun volume-rect-parallepiped (arg1 arg2 arg3)
+(defun volume-rect-parallepiped (leg1 leg2 leg3)
 	"Volume of rectangle parallepiped by 3 sides"
-	(* arg1 arg2 arg3))
+	(* leg1 leg2 leg3))
