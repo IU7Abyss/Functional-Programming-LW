@@ -16,7 +16,7 @@
 			\item[$\Longrightarrow$] \underline{возвращается результат}: $3$.
 		\end{itemize}
 		\item[$\Longrightarrow$] применение $equal$ к $3, 3$;
-		\item[$\Longrightarrow$] \underline{результат}: T.
+		\item[$\Longrightarrow$] \underline{возвращается результат}: T.
 	\end{itemize}
 \end{itemize}
 \vfill
@@ -134,7 +134,6 @@
 		\item[$\Longrightarrow$] \underline{вычисляется результат}: NIL.
 	\end{itemize}
 \end{itemize}
-\vfill
 
 
 
@@ -151,32 +150,44 @@
 \]
 \vfill
 
-\begin{enumerate}
-	\item $\bigl(+\; (*\; arg1\; arg1)\; (*\; arg2\; arg2)\bigr)$:
-	\begin{enumerate}
-		\item $(*\; arg1\; arg1)$:
-		\begin{enumerate}
-			\item $arg1 \to arg1$;
-			\item $arg1 \to arg1$;
-			\item применение <<$*$>> к $arg1, arg1$;
-			\item \underline{результат}: $(arg1)^2$.
-		\end{enumerate}
-		\item $(*\; arg2\; arg2)$:
-		\begin{enumerate}
-			\item $arg2 \to arg2$;
-			\item $arg2 \to arg2$;
-			\item применение <<$*$>> к $arg2, arg2$;
-			\item \underline{результат}: $(arg2)^2$.
-		\end{enumerate}
-		\item применение <<$+$>> к $(arg1)^2, (arg2)^2$;
-		\item \underline{результат}: $(arg1)^2 + (arg2)^2$.
-	\end{enumerate}
-	\item применение $sqrt$ к $(arg1)^2 + (arg2)^2$;
-	\item \underline{результат}: $\sqrt{(arg1)^2 + (arg2)^2}$.
-\end{enumerate}
+\begin{itemize}
+	\item[$\longrightarrow$] $(hypotenuse\!-\!rect\!-\!triangle\; q\; w)$
+	\begin{itemize}
+		\item[\textbullet] вычисляется $q \to q$;
+		\item[\textbullet] вычисляется $w \to w$;
+	\end{itemize}
+	\item[$\Longrightarrow$] запускается функция $hypotenuse\!-\!rect\!-\!triangle$;
+	\begin{itemize}
+		\item[\textbullet] создаётся переменная $leg1$ cо значением $q$;
+		\item[\textbullet] создаётся переменная $leg2$ cо значением $w$;
+		\item[$\longrightarrow$] $\Bigl(sqrt\; \bigl(+\; (*\; leg1\; leg1)\; (*\; leg2\; leg2)\bigr)\Bigr)$:
+		\begin{itemize}
+			\item[$\longrightarrow$] $\bigl(+\; (*\; leg1\; leg1)\; (*\; leg2\; leg2)\bigr)$:
+			\begin{enumerate}
+				\item[$\longrightarrow$] $(*\; leg1\; leg1)$:
+				\begin{enumerate}
+					\item[\textbullet] вычисляется $leg1 \to q$;
+					\item[\textbullet] вычисляется $leg1 \to q$;
+					\item[$\Longrightarrow$] применение <<$*$>> к $q, q$;
+					\item[$\Longrightarrow$] \underline{возвращается результат}: $q^2$.
+				\end{enumerate}
+				\item[$\longrightarrow$] $(*\; leg2\; leg2)$:
+				\begin{enumerate}
+					\item[\textbullet] $leg2 \to w$;
+					\item[\textbullet] $leg2 \to w$;
+					\item[$\Longrightarrow$] применение <<$*$>> к $w, w$;
+					\item[$\Longrightarrow$] \underline{возвращается результат}: $w^2$.
+				\end{enumerate}
+				\item[$\Longrightarrow$] применение <<$+$>> к $q^2, w^2$;
+				\item[$\Longrightarrow$] \underline{возвращается результат}: $q^2 + w^2$.
+			\end{enumerate}
+		\end{itemize}
+		\item[$\Longrightarrow$] применение $sqrt$ к $q^2 + w^2$;
+		\item[$\Longrightarrow$] \underline{возвращается результат}: $\sqrt{q^2 + w^2}$.
+	\end{itemize}
+\end{itemize}
 
 
-\newpage
 \problem Функция вычисляет объём прямоугольного параллелепипеда по 3-м его сторонам.
 
 \biglisting{../../Problems/src/problem-2-2.lisp}
@@ -186,18 +197,18 @@
 	\item $q \to q$;
 	\item $w \to w$;
 	\item $e \to e$;
-	\item[$\Longrightarrow$] применение $volume\!-\!rect\!-\!parallepiped$ к $q, w, e$:
+	\item[$\Longrightarrow$]  $volume\!-\!rect\!-\!parallepiped$ к $q, w, e$:
 	\begin{itemize}
-		\item[\textbullet] $arg1 \to q$;
-		\item[\textbullet] $arg2 \to w$;
-		\item[\textbullet] $arg3 \to e$;
-		\item[$\longrightarrow$] $(*\; arg1\; arg2\; arg3)$:
+		\item[\textbullet] создаётся переменная $leg1$ со значением $q$;
+		\item[\textbullet] создаётся переменная $leg2$ со значением $w$;
+		\item[\textbullet] создаётся переменная $leg3$ со значением $e$;
+		\item[$\longrightarrow$] $(*\; leg1\; leg2\; leg3)$:
 		\begin{itemize}
-			\item[\textbullet] $arg1 \to q$;
-			\item[\textbullet] $arg2 \to w$;
-			\item[\textbullet] $arg3 \to e$;
-			\item[$\Longrightarrow$] применение <<$*$>> к $arg1, arg2, arg3$;
-			\item[$\Longrightarrow$] \underline{результат}: $q \cdot w \cdot e$.
+			\item[\textbullet] вычисляется $leg1 \to q$;
+			\item[\textbullet] вычисляется $leg2 \to w$;
+			\item[\textbullet] вычисляется $leg3 \to e$;
+			\item[$\Longrightarrow$] применение <<$*$>> к $q$, $w$, $e$;
+			\item[$\Longrightarrow$] \underline{возвращается результат}: $q \cdot w \cdot e$.
 		\end{itemize}
 	\end{itemize}
 	\item[$\Longrightarrow$] \underline{результат}: $q \cdot w \cdot e$.
