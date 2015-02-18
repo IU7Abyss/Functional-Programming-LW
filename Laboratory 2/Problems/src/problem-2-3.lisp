@@ -1,6 +1,3 @@
-(defun sqr (arg)
-    (* arg arg))
-
-(defun problem-2-3 (leg hypotenuse)
-    (sqrt (- (sqr hypotenuse)
-             (sqr leg))))
+(defun leg-of-rect-triangle (leg hypotenuse)
+    (sqrt (- (* hypotenuse hypotenuse)
+             (* leg leg))))
