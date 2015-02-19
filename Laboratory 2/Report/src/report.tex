@@ -450,6 +450,54 @@
 \end{lstlisting}
 
 
+\problem \hfill
+\begin{lstlisting}
+(equal (+ 1 2) 3) => T
+\end{lstlisting}
+
+
+\problem \hfill
+\begin{lstlisting}
+(equal (abs (- 2 4)) 3) => NIL
+\end{lstlisting}
+
+
+\problem \hfill
+\begin{lstlisting}
+(equal (abs (- 2 4)) 2) => T
+\end{lstlisting}
+
+
+\problem \hfill
+\begin{lstlisting}
+(eql (abs (- 2 4)) 2.0) => NIL
+\end{lstlisting}
+
+
+\problem \hfill
+\begin{lstlisting}
+(eql (abs (- 2 4)) 2) => T 
+\end{lstlisting}
+
+
+\problem \hfill
+\begin{lstlisting}
+(eql (list (abs (- 2 4))) '(2.0)) => NIL
+\end{lstlisting}
+
+
+\problem \hfill
+\begin{lstlisting}
+(equal (list (abs (- 2 4))) '(2)) => T
+\end{lstlisting}
+
+
+\problem \hfill
+\begin{lstlisting}
+(equalp (list (abs (- 2 4))) '(2.0)) => T 
+\end{lstlisting}
+
+
 
 \section{Написать функцию}
 
