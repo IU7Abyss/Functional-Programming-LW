@@ -1,7 +1,4 @@
-(defun pred1 (x)
-    (and (numberp x)
-         (plusp x)))
-
-(defun pred2 (x)
-    (and (plusp x)
-         (numberp x)))
+(defun geqp (arg1 arg2)
+    (and (numberp arg1) 
+         (numberp arg2)
+         (>= arg1 arg2)))
