@@ -1,0 +1,7 @@
+(load "problem-2-1.lisp")
+(load "problem-2-2.lisp")
+(load "problem-2-3.lisp")
+(load "problem-2-4.lisp")
+(load "problem-4-1.lisp")
+(load "problem-4-2.lisp")
+(load "problem-5.lisp")
