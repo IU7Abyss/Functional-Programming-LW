@@ -1,5 +1,29 @@
 % !TEX root = main.tex
 
+\section{Чем принципиально отличаются функции \texttt{CONS}, \texttt{LIST}, \texttt{APPEND}}
+
+Пусть
+\begin{lstlisting}
+(setf lst1 '(a b))
+(setf lst2 '(c d))
+\end{lstlisting}
+Тогда при использовании \verb|CONS|
+\begin{lstlisting}
+(cons lst1 lst2) => ((A B) C D) 
+\end{lstlisting}
+Таким образом \verb|CONS| создаёт \textit{списочную ячейку}, у которой \textit{car-указатель} указывает на первый аргумент, а \textit{cdr-указатель} --- на второй.
+При использовании \verb|LIST|
+\begin{lstlisting}
+(list lst1 lst2) => ((A B) (C D)) 
+\end{lstlisting}
+Получаем, что \verb|LIST| гарантирует возвращение нового \textit{списка} из элементов, переданных функции в качестве аргументов.
+При использовании \verb|APPEND|
+\begin{lstlisting}
+(append lst1 lst2) => (A B C D)
+\end{lstlisting}
+\verb|APPEND| возвращает новый список, который формируется из объединения списков переданных функции в качестве аргументов. При этом последний аргумент может являться не списком. \verb|CDR| указатель нового списка будет указывать как раз на последний аргумент.
+
+
 \section{Вычислить результат выражения}
 
 \problem \hfill
@@ -33,5 +57,5 @@
 \problem \hfill
 
 \begin{lstlisting}
-(reverse '(a b c)) => 
+(reverse '(a b c)) => (C B A)
 \end{lstlisting}
