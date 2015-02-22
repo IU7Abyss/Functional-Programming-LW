@@ -26,12 +26,15 @@
   (let ((turn (throw-dice2)))
   (format T "~:s: ~a~%" name turn)
   (cond ((is-lucky turn)
-         (play name `(,all-turns ,turn) (+ (sum-dice2 turn) score)))
+         (play name 
+               `(,all-turns ,turn) 
+               (+ score (sum-dice2 turn))))
         ((is-winner turn)
          (format T "~:s is winner!~%" name) T)
         (T (+ (sum-dice2 turn) score)))))
 
-(defun game (&optional (player-name1 'Player1) (player-name2 'Player2))
+(defun game (&optional (player-name1 'Player1) 
+                       (player-name2 'Player2))
   (let ((score1 (play player-name1)))
     (if (numberp score1) 
       (let ((score2 (play player-name2))) 
