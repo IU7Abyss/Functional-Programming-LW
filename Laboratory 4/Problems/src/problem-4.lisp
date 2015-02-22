@@ -43,6 +43,6 @@
                  (format T "~:s is winner!~%" player-name1))
                 ((> score2 score1) 
                  (format T "~:s is winner!~%" player-name2))
-                (t 
+                (T 
                  (format T "Drawn Game~%"))))))
    "GG WP"))
