@@ -1,0 +1,8 @@
+Вопросы:
+	- and/or, как они работают, что возвращают
+	- if/cond
+	- oddp/evenp
+	- signum
+	- first/second/ ... /tenth/nth
+	- signum
+	- numberp/minusp/zerop/plusp
