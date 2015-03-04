@@ -1,8 +1,8 @@
 (setf test-table '((country1 . city1) 
-				   (country2 . city2) 
-				   (country3 . city3) 
-				   (country4 . city4) 
-				   (country5 . city5)))
+                   (country2 . city2) 
+                   (country3 . city3) 
+                   (country4 . city4) 
+                   (country5 . city5)))
 
 (defun get-city (country table)
   (rest (find-if #'(lambda (x) (equal (first x) country)) 
