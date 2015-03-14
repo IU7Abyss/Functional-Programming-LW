@@ -1,18 +1,12 @@
-(defun c-count (element lst)
-  "Return number of elements in the list"
-  (let ((i 0))
-    (declare (fixnum i))
-    (mapcar #'(lambda (_x) 
-                (and (equal element _x) 
-                     (setq i (1+ i))))
-            lst)
-    i))
-
 (defun pos-element-in-list (element lst)
   "Return mask where the element in the set"
   (mapcar #'(lambda (x)
-              (and (equal element x) 1)) 
+              (if (equal element x) 1 0)) 
           lst))
+
+(defun c-count (element lst)
+  (let ((mask (pos-element-in-list element lst)))
+    (reduce #'+ mask)))
 
 (defun in-list (element lst)
   "Return T if the element in the list"
@@ -40,14 +34,23 @@
     ((null set) nil)
     (t (_normalize-set set))))
 
+(defun is-elements-in-set (set1 set2)
+  (mapcar #'(lambda (_element) 
+                      (if (in-list _element set2) 1 0))
+          set1))
+
+(defun _set-equalp (set1 set2)
+  (let ((mask1 (is-elements-in-set set1 set2))
+        (c2 (length set2)))
+    (or (eql (c-count 1 mask1) c2)
+        0)))
+
 (defun _set-equalp (set1 set2)
   "Internal for set-equalp without validation"
-  (let ((test t))
-    (mapcar #'(lambda (_element)
-                (if (not-in-list _element set2)
-                    (setq test nil)))
-            set1)
-    test))
+  (let ((mask (mapcar #'(lambda (_element) 
+                          (if (in-list _element set2) 1 0))
+                      set1)))
+    (eql (c-count 1 mask) (length set2))))
 
 (defun set-equalp (set1 set2)
   "Test on equal of sets"
