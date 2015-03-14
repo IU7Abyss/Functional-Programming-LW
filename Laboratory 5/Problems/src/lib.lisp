@@ -26,3 +26,16 @@
 (defun c-list-length (lst)
   (let ((bits (mapcar #'symbol-or-listp lst)))
     (c-count t bits)))
+
+(defun _c-reverse (l)
+  (let ((buf (list nil)))
+    (mapcar #'(lambda (_element)
+                (push _element (first buf)))
+            l)
+    (car buf)))
+
+(defun c-reverse (l)
+  (let ((len (c-list-length l)))
+    (cond
+      ((< len 2) l)
+      (t (_c-reverse l)))))
