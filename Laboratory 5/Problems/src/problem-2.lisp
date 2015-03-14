@@ -55,6 +55,7 @@
          (normal-set2 (normalize-set set2))
          (length-set1 (length normal-set1))
          (length-set2 (length normal-set2)))
+    (declare (fixnum length-set1 length-set2))
     (cond 
       ((/= length-set1 length-set2) nil)
       (t (_set-equalp normal-set1 normal-set1)))))
