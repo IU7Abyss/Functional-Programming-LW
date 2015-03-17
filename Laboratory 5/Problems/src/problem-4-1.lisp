@@ -1,22 +1,25 @@
-(defun swap-first-last-dl1 (dlst)
+(defun swap-first-last-dl1 (dl)
   "Swap for dotted-list"
-  (let ((t-first (car dlst))
-        (t-last (last dlst 0)))
-    (cond ((consp dlst) (rplaca dlst t-last)
-                        (rplacd (last dlst) t-first)
-                        dlst)
-          (T Nil))))
+  (let ((t-first (car dl))
+        (t-last (last dl 0)))
+    (cond 
+      ((consp dl) (rplaca dl t-last)
+                    (rplacd (last dl) t-first)
+                    dl)
+      (t nil))))
     
-(defun swap-first-last-l1 (lst)
+(defun swap-first-last-l1 (l)
   "Swap for list"
-  (let ((t-first (car lst))
-        (t-last (car (last lst))))
-    (cond ((consp lst) (rplaca lst t-last)
-                       (rplacd (last lst 2) `(,t-first))
-                       lst)
-          (T Nil))))
+  (let ((t-first (car l))
+        (t-last (car (last l))))
+    (cond 
+      ((consp l) (rplaca l t-last)
+                 (rplacd (last l 2) `(,t-first))
+                 l)
+      (t nil))))
 
-(defun swap-first-last1 (lst)
+(defun swap-first-last1 (l)
   "Smart swap"
-  (cond ((last lst 0) (swap-first-last-dl lst))
-        (T (swap-first-last-l lst))))
+  (cond 
+    ((last l 0) (swap-first-last-dl1 l))
+    (t (swap-first-last-l1 l))))
