@@ -15,5 +15,6 @@
 # Полезности:
 * [HyperSpec](http://www.lispworks.com/documentation/HyperSpec/Front)
 * [CLiki](cliki.net)
+* [Magic](lisperati.com)
 * [Some book](http://www.cs.cmu.edu/~dst/LispBook/book.pdf)
 * [Another book](http://psg.com/~dlamkins/sl/contents.html)
