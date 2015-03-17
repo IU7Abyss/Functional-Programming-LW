@@ -18,7 +18,10 @@
 
 (defun swap-first-last2 (l)
   "Smart swap"
-  (cond 
-    ((not (consp (rest l))) `(,(cdr l) . ,(car l)))
+  (cond
+    ((not (or (consp (cdr l)) 
+              (null (cdr l)))) 
+     `(,(cdr l) . ,(car l)))
+    ((< (length l) 2) l) 
     ((last l 0) (swap-first-last-dl2 l))
     (T (swap-first-last-l2 l))))

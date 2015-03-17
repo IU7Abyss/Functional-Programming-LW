@@ -1,13 +1,16 @@
-(defun rm (fn lst &key from-end)
-  (funcall fn #'(lambda (x) (or (equal x (car lst))
-                                (equal x (car (last lst))))) 
-              lst 
-              :count 1
-              :from-end from-end))
+(defun rm (fn l &key from-end)
+  (funcall fn 
+           #'(lambda (x) 
+               (or (equal x (car l))
+                   (equal x (car (last l))))) 
+           l 
+           :count 1
+           :from-end from-end))
 
-(defun swap-first-last3 (lst)
+(defun swap-first-last3 (l)
   "Swap but dotted-list"
-  (cond ((= (length lst) 1) lst)
-        (T `(,(car (last lst)) 
-             ,@(t1 #'remove-if (t1 #'remove-if lst) :from-end T)
-             ,(first lst)))))
+  (cond 
+    ((< (length l) 2) l)
+    (T `(,(car (last l)) 
+        ,@(rm #'remove-if (rm #'remove-if l) :from-end T)
+        ,(first l)))))
