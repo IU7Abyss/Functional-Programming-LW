@@ -5,9 +5,11 @@
                    (country5 . city5)))
 
 (defun get-city (country table)
-  (rest (find-if #'(lambda (x) (equal (first x) country)) 
+  (rest (find-if #'(lambda (x) 
+                     (equal (first x) country)) 
                  table)))
 
 (defun get-country (city table)
-  (first (find-if #'(lambda (x) (equal (rest x) city)) 
+  (first (find-if #'(lambda (x) 
+                      (equal (rest x) city)) 
                   table)))
