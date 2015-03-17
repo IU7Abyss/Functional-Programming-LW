@@ -1,0 +1,16 @@
+(defun _between (numbs l r)
+  (declare (fixnum l r))
+  (mapcar #'(lambda (_x)
+              (if (<= l _x r)
+                  _x))
+          numbs))
+
+(defun between (numbs l r)
+  (declare (fixnum l r))
+  (let ((data (_between numbs l r)))
+    (remove-if-not #'numberp data)))
+
+(defun sort-numbs-between (numbs l r)
+  (declare (fixnum l r))
+  (let ((data (between numbs l r)))
+    (sort data #'<)))
