@@ -1,0 +1,11 @@
+(defun cycle-shift-right (l)
+  "Cycle shift list to right"
+  (let ((hold nil)
+        (before nil)
+        (last-el (car (last l))))
+    (maplist #'(lambda (_x)
+                 (setf hold (first _x))
+                 (rplaca _x before)
+                 (setf before hold))
+             l)
+    (rplaca l last-el)))
