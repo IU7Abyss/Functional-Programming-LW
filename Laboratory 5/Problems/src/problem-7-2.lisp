@@ -1,8 +1,13 @@
-(defun smart-multiply-by (l k)
-  "Smart multiply list of numbers by k"
-  (declare (fixnum k))
-  (mapcar #'(lambda (_x)
-              (if (numberp _x) 
-                  (* _x k)
-                  _x))
-          l))
+(defun smart-multiply-by (lst coef)
+  (let ((item (first lst))
+        (tail (rest lst)))
+    (cond ((null lst) nil)
+          ((numberp item)
+           (cons (* item coef)
+                 (smart-multiply-by tail coef)))
+          ((listp item) 
+           (cons (smart-multiply-by item coef)
+                 (smart-multiply-by tail coef)))
+          (t 
+           (cons item
+                 (smart-multiply-by tail coef))))))
