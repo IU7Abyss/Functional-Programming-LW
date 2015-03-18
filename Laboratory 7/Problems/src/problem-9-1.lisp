@@ -1,0 +1,7 @@
+(defun bubble-sort-list (l &optional (predicate #'<))
+  (do ((swapped t)) ((not swapped) l)
+    (setf swapped nil)
+    (do ((l l (rest l))) ((endp (rest l)))
+      (when (funcall predicate (second l) (first l))
+        (rotatef (first l) (second l))
+        (setf swapped t)))))
