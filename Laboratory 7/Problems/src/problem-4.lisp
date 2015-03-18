@@ -1,0 +1,6 @@
+(defun it-nth (n l)
+  (declare (fixnum n))
+  (if (>= n 0)
+      (do ((x l (rest x))
+           (i 0 (1+ i)))
+          ((= i n) (first x)))))
