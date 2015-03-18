@@ -1,0 +1,13 @@
+(defun dolist-max (l)
+  (let ((result (first l)))
+    (dolist (item l result)
+      (when (> item result)
+        (setf result item)))))
+
+(defun do-max (l)
+  (do* ((result (first l))
+        (sub-l (rest l) (rest sub-l))
+        (item (first sub-l) (first sub-l)))
+       ((null sub-l) result)
+    (when (> item result)
+      (setf result item))))
