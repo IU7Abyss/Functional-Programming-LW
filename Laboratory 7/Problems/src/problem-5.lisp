@@ -1,0 +1,5 @@
+(defun it-reverse (l)
+  (let ((r nil))
+    (dolist (x l)
+      (push x r))
+    r))
