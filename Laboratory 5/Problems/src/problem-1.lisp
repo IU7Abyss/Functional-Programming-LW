@@ -1,6 +1,6 @@
-(defun palindromep (l)
-  (equal l
-         (c-reverse l)))
+(defun palindromep (lst)
+  (equal lst
+         (c-reverse lst)))
 
-(defun is-palindromes (l)
-  (mapcar #'palindromep l))
+(defun is-palindromes (lst)
+  (mapcar #'palindromep lst))

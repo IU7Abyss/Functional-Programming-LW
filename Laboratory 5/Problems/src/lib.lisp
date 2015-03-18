@@ -1,41 +1,36 @@
-(defun pos-element-in-list (element l)
+(defun pos-element-in-list (element lst)
   "Return mask where the element in the set"
-  (mapcar #'(lambda (x)
-              (if (equal element x) 1 0)) 
-          l))
+  (mapcar #'(lambda (x) (if (equal element x) 1 0)) 
+          lst))
 
-(defun c-count (element l)
-  (let ((mask (pos-element-in-list element l)))
+(defun c-count (element lst)
+  (let ((mask (pos-element-in-list element lst)))
     (reduce #'+ mask)))
 
-(defun in-list (element l)
+(defun in-list (element lst)
   "Return T if the element in the list"
-  (let* ((bits (pos-element-in-list element l))
+  (let* ((bits (pos-element-in-list element lst))
          (i (c-count 1 bits)))
     (declare (fixnum i))
     (< 0 i)))
 
-(defun not-in-list (element l)
+(defun not-in-list (element lst)
   "Return T if the element not in the list"
-  (not (in-list element l)))
+  (not (in-list element lst)))
 
 (defun symbol-or-listp (arg)
   (or (symbolp arg)
       (listp arg)))
 
-(defun c-list-length (l)
-  (let ((bits (mapcar #'symbol-or-listp l)))
+(defun c-list-length (lst)
+  (let ((bits (mapcar #'symbol-or-listp lst)))
     (c-count t bits)))
 
-(defun _c-reverse (l)
-  (let ((buf (list nil)))
-    (mapcar #'(lambda (_element)
-                (push _element (first buf)))
-            l)
-    (car buf)))
+(defun _c-reverse (l &aux (buf (list nil)))
+  (mapcar #'(lambda (_element) (push _element (first buf)))
+          l)
+  (car buf))
 
-(defun c-reverse (l)
-  (let ((len (c-list-length l)))
-    (cond
-      ((< len 2) l)
-      (t (_c-reverse l)))))
+(defun c-reverse (lst &aux (len (c-list-length l)))
+  (cond ((< len 2) lst)
+        (t (_c-reverse lst))))

@@ -31,6 +31,5 @@
          (length-set1 (c-list-length normal-set1))
          (length-set2 (c-list-length normal-set2)))
     (declare (fixnum length-set1 length-set2))
-    (cond 
-      ((/= length-set1 length-set2) nil)
-      (t (_set-equalp normal-set1 normal-set2)))))
+    (cond ((/= length-set1 length-set2) nil)
+          (t (_set-equalp normal-set1 normal-set2)))))
