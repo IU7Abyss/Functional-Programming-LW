@@ -1,5 +1,4 @@
 (defun it-reverse (l)
-  (let ((r nil))
-    (dolist (x l)
-      (push x r))
-    r))
+  (let ((result nil))
+    (dolist (item l result)
+      (push item result))))

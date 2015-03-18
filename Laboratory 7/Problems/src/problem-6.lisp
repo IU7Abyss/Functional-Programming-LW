@@ -1,9 +1,8 @@
 (defun it-union (x y)
   (let ((result (copy-list x)))
-    (dolist (item y)
+    (dolist (item y result)
       (if (not (member item result))
-        (push item result)))
-    result))
+        (push item result)))))
 
 (defun it-complement (x y)
   (let ((result nil))
