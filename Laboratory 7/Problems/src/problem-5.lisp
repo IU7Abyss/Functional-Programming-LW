@@ -1,4 +1,3 @@
-(defun it-reverse (l)
-  (let ((result nil))
-    (dolist (item l result)
-      (push item result))))
+(defun it-reverse (lst &aux (result nil))
+  (dolist (item lst result)
+    (push item result))))
