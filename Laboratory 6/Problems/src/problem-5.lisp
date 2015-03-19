@@ -1,12 +1,6 @@
-(defun f5 (A B) (
-  apply 'append
-  (
-    mapcar #'(lambda (A) (
-      mapcar #'(lambda (B) ( 
-        list A B
-      )) 
-      B
-    ))
-    A
-  )
-))
+(defun cross-set (x y)
+  (mapcan #'(lambda (_x)
+              (mapcar #'(lambda (_y)
+                          (list _x _y))
+                      y))
+          x)
