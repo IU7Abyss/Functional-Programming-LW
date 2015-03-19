@@ -1,3 +1,17 @@
-(defun sub-by-10 (l) 
-  (mapcar #'(lambda (n) (- n 10)) 
+(defun sub-by-10 (lst) 
+  (mapcar #'(lambda (x) (- x 10)) 
           l))
+
+(defun smart-deep-sub (lst coef)
+  (let ((item (first lst))
+        (tail (rest lst)))
+    (cond ((null item) nil)
+          ((numberp item)
+           (cons (- item coef)
+                 (smart-deep-sub tail)))
+          ((listp item)
+           (cons (smart-deep-sub item)
+                 (smart-deep-sub tail)))
+          (t
+           (cons item
+                 (smart-deep-sub tail))))))
