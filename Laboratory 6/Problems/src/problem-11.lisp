@@ -1,8 +1,5 @@
-(defun f11 (lst) (
-  cond 
-    ((null lst) nil)
-    ((= (length lst) 1) (car lst))
-    (T
-      (f11 (rest lst))
-    )
-))
+(defun custom-last (lst)
+  (let ((item (first lst))
+        (tail (rest lst)))
+    (cond ((null tail) item)
+          (t (custom-last tail)))))
