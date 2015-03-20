@@ -1,7 +1,11 @@
-(defun rec-add (lst) (
-  cond 
-    ((null lst) '0)
-    (T 
-      (+ (car lst) (rec-add (cdr lst))) 
-    )  
-))
+(defun rec-add (lst)
+  (let ((item (first lst))
+        (tail (rest lst)))
+    (cond ((null lst) 0)
+          ((listp item)
+           (+ (rec-add item)
+              (rec-add tail)))
+          ((numberp item)
+           (+ item
+              (rec-add tail)))
+          (t (format t "Error: <~a> is not a number" item)))))
