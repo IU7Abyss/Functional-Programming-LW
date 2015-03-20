@@ -1,8 +1,9 @@
-(defun f12_2 (n m d) (
-  cond
-    ((= n m) 0)
-    ((> n m) (- n d))
-    (T
-      (+ n (f12_2 (+ n d) m d))
-    )
-))
+(defun sum-args (lst n)
+  (let ((item (first lst))
+        (tail (rest lst))
+        (i (1- n)))
+    (cond ((or (null lst) (eql -1 n)) 0)
+          ((listp item)
+           (+ (deep-sum item)
+              (sum-args tail i)))
+          (t (+ item (sum-args tail i))))))
