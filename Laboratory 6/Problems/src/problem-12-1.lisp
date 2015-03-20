@@ -1,7 +1,8 @@
-(defun f12_1 (n) (
-  cond
-    ((zerop n) 0)
-    (T
-      (+ n (f12_1 (- n 1)))
-    )
-))
+(defun deep-sum (lst)
+  (let ((item (first lst))
+        (tail (rest lst)))
+    (cond ((null lst) 0)
+          ((listp item)
+           (+ (deep-sum item)
+              (deep-sum tail)))
+          (t (+ item (deep-sum tail))))))
