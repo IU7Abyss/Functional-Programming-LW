@@ -1,8 +1,6 @@
-(defun rec-nth (lst n) (
-  cond 
-    ((null lst) nil)
-    ((= n 1) (car lst)) 
-    (T 
-      (rec-nth (cdr lst) (- n 1)) 
-    )  
-))
+(defun rec-nth (n lst)
+  (let ((item (first lst))
+        (tail (rest lst)))
+    (cond ((null lst) nil)
+          ((eql n 0) item)
+          (t (rec-nth (1- n) tail)))))
