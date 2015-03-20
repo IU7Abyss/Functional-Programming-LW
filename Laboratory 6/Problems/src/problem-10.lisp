@@ -1,8 +1,14 @@
-(defun alloddp (lst) (
-  cond
-    ((null lst) T)
-    ((evenp (car lst)) nil)
-    (T 
-      (alloddp (rest lst))
-    )
-))
+(defun alloddp (lst)
+  (let ((item (first lst))
+        (tail (rest lst)))
+    (cond ((null lst) nil)
+          ((and (consp item) tail)
+           (and (alloddp item)
+                (alloddp tail)))
+          ((and (consp item))
+           (and (alloddp item)))
+          ((and (oddp item) tail)
+           (and t (alloddp tail)))
+          ((oddp item)
+           t)
+          (t nil))))
