@@ -1,13 +1,7 @@
-(defun f3 (lst) 
-  (nth 0 
-       (remove-if-not 
-          #'(lambda (x) 
-              (and (listp x) (not (null x))))  
-          lst)))
-
-(defun f3 (lst) (
-  cond
-    ((null lst) nil)
-    ((atom (car lst)) (f3 (cdr lst) ))
-    (T (car lst))
-))
+(defun first-not-null-list (lst)
+  (let ((item (first lst))
+        (tail (rest lst)))
+    (cond ((null lst) nil)
+          ((atom item) 
+           (first-not-null-list tail))
+          (t item))))
