@@ -1,0 +1,6 @@
+(defun cross-set (x y)
+  (mapcan #'(lambda (_x)
+              (mapcar #'(lambda (_y)
+                          (list _x _y))
+                      y))
+          x))

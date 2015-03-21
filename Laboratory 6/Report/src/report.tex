@@ -1,0 +1,137 @@
+% !TEX root = main.tex
+
+\section{Что будет результатом?}
+
+\begin{lstlisting}
+(mapcar 'вектор '(570-40-8)) => Undefined function
+\end{lstlisting}
+
+
+
+\section{Функция, которая уменьшает на 10 все числа из списка-аргумента этой функции}
+
+\subsection{с помощью функционала}
+
+\biglisting{../../Problems/src/problem-02-1.lisp}
+
+
+\subsection{с помощью рекурсии с возможностью глубокой обработки}
+
+\biglisting{../../Problems/src/problem-02-2.lisp}
+
+
+
+\section{Функция, которая возвращает  первый  аргумент списка-аргумента, который сам является непустым списком}
+
+\biglisting{../../Problems/src/problem-03.lisp}
+
+
+
+\section{Функция, которая выбирает из заданного списка только те числа, которые больше 1 и меньше 10}
+
+Функция \texttt{between} фильтрует список элементов любой вложенности. Возвращает одноуровневый список состоящий из чисел находящихся между границей \texttt{left} и \texttt{right} игнорируя атомы, которые не являются числом. 
+
+\biglisting{../../Problems/src/problem-04.lisp}
+
+
+
+\section{Функция, вычисляющая декартово произведение двух своих списков-аргументов}
+
+\biglisting{../../Problems/src/problem-05.lisp}
+
+
+
+\section{Почему так реализовано \texttt{reduce}, в чем причина?}
+
+\begin{lstlisting}
+(reduce #'+ ()) => 0
+(reduce #'* ()) => 1
+\end{lstlisting}
+
+\noindent
+Из дискретной математики известно, что для операции \texttt{`+`} нейтральным элементом является $0$, а для операции \texttt{`*`} --- является $1$.
+
+
+
+\section{Функция, которая вычисляет сумму длин всех элементов}
+
+\biglisting{../../Problems/src/problem-07.lisp}
+
+
+
+\section{Рекурсивную версия вычисления суммы чисел заданного списка}
+
+\biglisting{../../Problems/src/problem-08.lisp}
+
+
+
+\section{Рекурсивная версия функции \texttt{nth}}
+
+\biglisting{../../Problems/src/problem-09.lisp}
+
+
+
+\section{Рекурсивную функцию  \texttt{alloddp}, которая возвращает \texttt{T}, когда все элементы списка нечётные}
+
+\biglisting{../../Problems/src/problem-10.lisp}
+
+
+
+\section{Рекурсивная  функция, относящаяся к хвостовой рекурсии с одним тестом завершения, которая возвращает последний элемент списка-аргумента}
+
+\biglisting{../../Problems/src/problem-11.lisp}
+
+
+
+\section{Написать рекурсивную функцию, которая}
+
+\subsection{вычисляет сумму всех чисел}
+
+\biglisting{../../Problems/src/problem-12-1.lisp}
+
+\subsection{вычисляет сумму всех чисел от 0 до n-аргумента функции}
+
+\biglisting{../../Problems/src/problem-12-2.lisp}
+
+\subsection{от n-аргумента функции до последнего >= 0}
+
+\biglisting{../../Problems/src/problem-12-3.lisp}
+
+\subsection{от n-аргумента функции до m-аргумента c шагом d}
+
+\biglisting{../../Problems/src/problem-12-4.lisp}
+
+
+
+\section{Рекурсивная функция, которая возвращает последнее нечётное число из числового списка}
+
+\biglisting{../../Problems/src/problem-13.lisp}
+
+
+
+\section{Функция которая получает как аргумент список чисел, а возвращает список квадратов этих чисел в том же порядке}
+
+\biglisting{../../Problems/src/problem-14.lisp}
+
+
+
+\section{Написать функцию, которая}
+
+\subsection{из списка выбирает все нечётные числа}
+
+\biglisting{../../Problems/src/problem-15-1-1.lisp}
+
+
+\subsection{из списка выбирает все нечётные числа (рекурсия)}
+
+\biglisting{../../Problems/src/problem-15-1-2.lisp}
+
+
+\subsection{из списка выбирает все чётные числа}
+
+\biglisting{../../Problems/src/problem-15-2-1.lisp}
+
+
+\subsection{из списка выбирает все чётные числа (рекурсия)}
+
+\biglisting{../../Problems/src/problem-15-2-2.lisp}
