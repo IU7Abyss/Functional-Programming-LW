@@ -1,0 +1,7 @@
+(defun do-max (lst)
+  (do* ((result (first lst))
+        (sub-list (rest lst) (rest sub-list))
+        (item (first sub-list) (first sub-list)))
+       ((null sub-list) result)
+    (when (> item result)
+      (setf result item))))

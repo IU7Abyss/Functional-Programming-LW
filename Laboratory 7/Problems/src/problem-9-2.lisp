@@ -1,0 +1,6 @@
+(defun quicksort (lst &aux (pivot (first lst)))
+  (if (rest lst)
+      (nconc (quicksort (remove-if-not #'(lambda (x) (< x pivot)) lst))
+             (remove-if-not #'(lambda (x) (= x pivot)) lst)
+             (quicksort (remove-if-not #'(lambda (x) (> x pivot)) lst)))
+      lst))
