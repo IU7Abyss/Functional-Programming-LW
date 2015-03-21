@@ -1,4 +1,4 @@
-(defun memberp (elt lst)
+(defun memberp (x lst)
   (dolist (item lst)
-    (when (equal item elt)
+    (when (equal x item)
       (return t))))
