@@ -7,9 +7,10 @@
 * Laboratory 2 -> done
 * Laboratory 3 -> done
 * Laboratory 4 -> done
-* Laboratory 5 -> def
-* Laboratory 6 -> работаем
-* Laboratory 7 -> работаем
+* Laboratory 5 -> done
+* Laboratory 6 -> done
+* Laboratory 7 -> done
+* Exam		   -> done
 
 # Полезности
 * [Некоторые лекции](https://github.com/IU7Abyss/Functional-Programming-LW/wiki)
